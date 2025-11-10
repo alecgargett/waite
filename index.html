@@ -55,7 +55,6 @@
                 <a href="#contact"
                    onmouseover="setIntroSmile(true)">Contact
                 </a>
-
             </nav>
             <button id="theme-toggle-button" onclick="toggleTheme()"
             onmouseover="setIntroSmile(true)">Toggle Theme</button>
@@ -64,7 +63,13 @@
 
     <main>
         <section id="home" class="page-intro">
-             <div class="intro-content-box responsive-width">
+             <div class="intro-content-box responsive-width"
+             onclick="const introBox = document.querySelector('.intro-content-box');
+             if (introBox.classList.contains('smile')) {
+               setIntroSmile(false);
+             } else {
+               setIntroSmile(true);
+             }">
                 <h1>Alec Gargett</h1>
                 <h2 class="subtitle">Independent for Waite</h2>
                 <div class="social-links">
@@ -596,7 +601,7 @@ body.light-theme .site-footer a {
         background-position: right 25%;
     }
     .intro-content-box.smile {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
                           url('images/alec_gargett_adelaide_oval_torrens_river_202303_smile_cropped.jpg');
     }
 }
