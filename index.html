@@ -646,29 +646,35 @@ function setIntroSmile(smileOn) {
 {   --font-family-heading: 'Merriweather', serif;
     --font-family-body: 'Lato', sans-serif;
 
-    --color-yellow-dark: rgb(255, 179, 0);
-    --color-yellow-light: rgb(255, 238, 186);
+    /* Yellow theme specific colors */
+    --colour-yellow-dark: rgb(255, 179, 0);
+    --colour-background-yellow: rgb(255, 238, 186);
+    --colour-transparent-yellow: rgba(255, 255, 255, 0.3);
 
-    --color-primary-light: rgb(13, 71, 161);
-    --color-secondary-light: rgb(0, 137, 123);
-    --color-background-light: rgb(248, 249, 250);
-    --color-surface-light: rgb(255, 255, 255);
-    --color-text-light: rgb(33, 37, 41);
-    --color-text-muted-light: rgb(108, 117, 125);
+    /* Shared light colors (used by both White and Yellow) */
+    --colour-primary-light: rgb(13, 71, 161);
+    --colour-secondary-light: rgb(0, 137, 123);
+    --colour-text-light: rgb(33, 37, 41);
+    --colour-text-muted-light: rgb(108, 117, 125);    
+    
+    /* Dark theme colors */
+    --colour-primary-dark: white;
+    --colour-secondary-dark: rgb(000, 222, 255);
+    --colour-background-dark: black;
+    --colour-transparent-dark: rgba(0, 0, 0, 0.8);
+    --colour-gradient-blue-dark: rgb(0, 10, 80);
+    --colour-surface-dark: rgba(20, 25, 40, 0.75);
+    --colour-text-dark: rgb(224, 224, 224);
+    --colour-text-muted-dark: rgb(173, 181, 189);
 
-    --color-primary-dark: white;
-    --color-secondary-dark: rgb(38, 166, 154);
-    --color-gradient-blue-dark: rgb(0, 10, 80);
-    --color-surface-dark: rgba(20, 25, 40, 0.75);
-    --color-text-dark: rgb(224, 224, 224);
-    --color-text-muted-dark: rgb(173, 181, 189);
-
-    --color-primary: var(--color-primary-light);
-    --color-secondary: var(--color-secondary-light);
-    --color-background: var(--color-background-light);
-    --color-surface: var(--color-surface-light);
-    --color-text: var(--color-text-light);
-    --color-text-muted: var(--color-text-muted-light);
+    /* Default Theme Mapping (White Theme) */
+    --colour-primary: var(--colour-primary-light);
+    --colour-secondary: var(--colour-secondary-light);
+    --colour-background: white; 
+    --colour-surface: white;
+    --colour-transparent: rgba(244, 255, 255);
+    --colour-text: var(--colour-text-light);
+    --colour-text-muted: var(--colour-text-muted-light);
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); }
 
 html
@@ -677,28 +683,32 @@ html
 
 
 body.dark-theme
-{   --color-primary: var(--color-primary-dark);
-    --color-secondary: var(--color-secondary-dark);
-    --color-surface: var(--color-surface-dark);
-    --color-text: var(--color-text-dark);
-    --color-text-muted: var(--color-text-muted-dark);
+{   --colour-primary: var(--colour-primary-dark);
+    --colour-secondary: var(--colour-secondary-dark);
+    --colour-transparent: var(--colour-transparent-dark); 
+    --colour-surface: var(--colour-surface-dark);
+    --colour-text: var(--colour-text-dark);
+    --colour-text-muted: var(--colour-text-muted-dark);
     
-    background: linear-gradient(to right, var(--color-gradient-blue-dark), rgb(0, 0, 0), var(--color-gradient-blue-dark)); }
+    background: linear-gradient(to right, var(--colour-gradient-blue-dark), rgb(0, 0, 0), var(--colour-gradient-blue-dark)); }
 
 body.yellow-theme
-{   --color-primary: var(--color-primary-light);
-    --color-secondary: var(--color-secondary-light);
-    --color-text: var(--color-text-light);
-    --color-text-muted: var(--color-text-muted-light);
+{   --colour-primary: var(--colour-primary-light);
+    --colour-secondary: var(--colour-secondary-light);
+    --colour-background: var(--colour-background-yellow);
+    --colour-transparent: var(--colour-transparent-yellow); 
+    --colour-surface: var(--colour-background-yellow);
+    --colour-text: var(--colour-text-light);
+    --colour-text-muted: var(--colour-text-muted-light);
 
-    background: linear-gradient(to right, var(--color-yellow-dark), var(--color-yellow-light), var(--color-yellow-dark)); }
+    background: linear-gradient(to right, var(--colour-yellow-dark), var(--colour-background-yellow), var(--colour-yellow-dark)); }
 
 html
 {   scroll-behavior: smooth; }
 
 body
-{   background-color: var(--color-background);
-    color: var(--color-text);
+{   background-color: var(--colour-background);
+    color: var(--colour-text);
     font-family: var(--font-family-body);
     margin: 0;
     line-height: 1.7;
@@ -713,11 +723,11 @@ body
 
 h1, h2, h3
 {   font-family: var(--font-family-heading);
-    color: var(--color-primary);
+    color: var(--colour-primary);
     line-height: 1.3; }
 
 h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-h2 { font-size: 2.25rem; margin-top: 2.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--color-secondary); padding-bottom: 0.5rem; }
+h2 { font-size: 2.25rem; margin-top: 2.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--colour-secondary); padding-bottom: 0.5rem; }
 h3 { font-size: 1.5rem; margin-top: 2rem; }
 h4 { font-size: 1.2rem; }
 
@@ -730,12 +740,12 @@ h4 small {
 p { margin-bottom: 1rem; }
 
 a
-{   color: var(--color-secondary);
+{   color: var(--colour-secondary);
     text-decoration: none;
     transition: color 0.2s ease; }
 a:hover
 {   text-decoration: underline;
-    color: var(--color-primary); }
+    color: var(--colour-primary); }
 
 ul
 {   list-style-type: disc;
@@ -768,36 +778,36 @@ body.yellow-theme .site-header
 {   font-family: var(--font-family-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-primary); }
+    color: var(--colour-primary); }
 .logo:hover
 {   text-decoration: none; }
 .logo-subtitle
 {   font-size: 0.9rem;
     font-weight: 400;
-    color: var(--color-text-muted);
+    color: var(--colour-text-muted);
     display: block; }
 .main-nav a
-{   color: var(--color-text);
+{   color: var(--colour-text);
     margin: 0 15px;
     font-weight: 700; }
 #theme-toggle-button
 {   background-color: transparent;
-    border: 1px solid var(--color-secondary);
-    color: var(--color-secondary);
+    border: 1px solid var(--colour-secondary);
+    color: var(--colour-secondary);
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s; }
 #theme-toggle-button:hover
-{   background-color: var(--color-secondary);
-    color: var(--color-surface); }
+{   background-color: var(--colour-secondary);
+    color: var(--colour-surface); }
 
 .page-intro
 {   padding: 4rem 0;
     text-align: center; }
 
 .intro-content-box
-{   background-color: var(--color-background);
+{   background-color: var(--colour-background);
     background-image: url('images/alec_gargett_adelaide_oval_torrens_river_202303_cropped.jpg');
     background-size: cover;
     background-position: right 25%;
@@ -828,7 +838,7 @@ body.yellow-theme .site-header
     transition: color 0.2s ease, transform 0.2s ease;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
 .social-links a:hover
-{   color: var(--color-secondary-dark);
+{   color: var(--colour-secondary-dark);
     transform: translateY(-2px);
     text-decoration: none; }
 .social-links svg
@@ -867,7 +877,7 @@ body.yellow-theme .site-header
 
 .content-section
 {   padding: 40px 20px;
-    background-color: var(--color-surface);
+    background-color: var(--colour-surface); 
     margin: 2rem auto;
     border-radius: 8px;
     box-shadow: var(--box-shadow); }
@@ -878,8 +888,86 @@ body.dark-theme .content-section li
     border-radius: 5px; }
 body.dark-theme .content-section
 {   background-color: rgba(0, 0, 0, 0); }
-body.yellow-theme .content-section
-{   background-color: var(--color-yellow-light); }
+
+.policy-toc {
+    margin-top: 1.5rem;
+    padding: 15px;
+    border: 1px solid var(--colour-text-muted);
+    border-radius: 8px;
+    background-color: var(--colour-transparent);
+}
+
+.toc-list {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.toc-list li::marker {
+    color: var(--colour-secondary);
+    font-weight: 700;
+    font-family: var(--font-family-heading);
+}
+
+.toc-list li {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.toc-list > li > a {
+    font-weight: 700;
+    color: var(--colour-primary); 
+    text-decoration: underline;
+    font-size: 1.1em;
+    transition: color 0.2s ease;
+    padding: 2px 0;
+}
+
+.toc-list > li > a:hover {
+    color: var(--colour-secondary);
+    text-decoration: underline;
+}
+
+.sub-toc-list {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 8px 0 0 0;
+    border-left: 3px solid var(--colour-text-muted);
+    transition: border-color 0.3s ease;
+}
+
+.sub-toc-list li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    font-weight: 400;
+}
+
+.sub-toc-list a {
+    color: var(--colour-secondary-dark);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.sub-toc-list a:hover {
+    color: var(--colour-primary-dark);
+    text-decoration: underline;
+}
+
+body.dark-theme .policy-toc {
+    border-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+body.dark-theme .policy-toc a, li {
+    color: white;
+}
+
+body.dark-theme .toc-list > li > a {
+    color: white;
+}
+body.dark-theme .toc-list > li > a:hover {
+    color: var(--colour-secondary-dark);
+}
+
 
 .contact-email
 {   font-size: 1.2rem;
@@ -887,7 +975,7 @@ body.yellow-theme .content-section
     margin-top: 2rem; }
 .disclaimer
 {   font-style: italic;
-    color: var(--color-text-muted);
+    color: var(--colour-text-muted);
     font-size: 0.9rem; }
 body.dark-theme .disclaimer
 {   background-color: transparent;
@@ -939,7 +1027,7 @@ body.yellow-theme .site-footer a:hover
 {       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
                           url('images/alec_gargett_adelaide_oval_torrens_river_202303_smile_cropped.jpg'); } }
 </style>
-     
+
 <script defer src="https://cdn.counter.dev/script.js" data-id="9cb95797-dd6c-4b86-ab11-90a4e37567d3" data-utcoffset="11"></script>
 </tail>
 </html>
