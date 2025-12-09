@@ -39,385 +39,472 @@
 </head>
  
 <body onload="applySavedTheme()">
+
 <div class="site-container">
-    <header class="site-header">
-        <div class="header-content responsive-width">
-            <div class="logo-group">
-                <a href="#home" class="logo">Alec Gargett</a>
-                <span class="logo-subtitle">Independent for Waite</span>
-            </div>
-            <nav class="main-nav">
-                <a href="#home"
-                onmouseover="setIntroSmile(false)">Home</a>
-                <a href="#plan"
-                onmouseover="setIntroSmile(false)">My plan</a>
-                <a href="#policy"
-                onmouseover="setIntroSmile(false)">My policies</a>
-                <!-- <a href="#about">About</a> -->
-                <a href="#contact"
-                   onmouseover="setIntroSmile(true)">Contact
-                </a>
-            </nav>
-            <button id="theme-toggle-button" onclick="toggleTheme()"
-            onmouseover="setIntroSmile(true)">Toggle Theme</button>
-        </div>
-    </header>
+<header class="site-header">
+ <div class="header-content responsive-width">
+  <div class="logo-group">
+   <a href="#home" class="logo">Alec Gargett</a>
+   <span class="logo-subtitle">Independent for Waite</span>
+  </div>
 
-    <main>
-        <section id="home" class="page-intro">
-             <div class="intro-content-box responsive-width"
-             onclick="const introBox = document.querySelector('.intro-content-box');
-             if (introBox.classList.contains('smile')) {
-               setIntroSmile(false);
-             } else {
-               setIntroSmile(true);
-             }">
-                <h1>Alec Gargett</h1>
-                <h2 class="subtitle">Independent for Waite</h2>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/profile.php?id=61582618821078" target="_blank" rel="noopener noreferrer" aria-label="Follow Alec on Facebook"
-                    onmouseover="setIntroSmile(true)">
-                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-                    </a>
-                    <a href="https://www.instagram.com/alecgargett/" target="_blank" rel="noopener noreferrer" aria-label="Follow Alec on Instagram"
-                    onmouseover="setIntroSmile(true)">
-                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 2c-2.72 0-3.05.01-4.12.06-1.06.05-1.79.22-2.42.47-.65.25-1.23.59-1.77 1.14-.54.54-.89 1.12-1.14 1.77-.25.63-.42 1.36-.47 2.42C2.01 8.95 2 9.28 2 12s.01 3.05.06 4.12c.05 1.06.22 1.79.47 2.42.25.65.59 1.23 1.14 1.77.54.54 1.12.89 1.77 1.14.63.25 1.36.42 2.42.47 1.07.05 1.4.06 4.12.06s3.05-.01 4.12-.06c1.06-.05 1.79-.22 2.42-.47.65-.25 1.23-.59 1.77-1.14.54-.54.89-1.12 1.14-1.77.25-.63.42-1.36.47-2.42.05-1.07.06-1.4.06-4.12s-.01-3.05-.06-4.12c-.05-1.06-.22-1.79-.47-2.42-.25-.65-.59-1.23-1.14-1.77-.54-.54-1.12-.89-1.77-1.14-.63-.25-1.36-.42-2.42-.47C15.05 2.01 14.72 2 12 2zm0 1.8c2.67 0 2.98.01 4.04.06 1.02.05 1.58.21 1.9.36.43.19.74.42 1.05.73.31.31.54.62.73 1.05.15.32.31.88.36 1.9.05 1.06.06 1.37.06 4.04s-.01 2.98-.06 4.04c-.05 1.02-.21 1.58-.36 1.9-.19.43-.42.74-.73 1.05-.31.31-.62.54-1.05.73-.32.15-.88.31-1.9.36-1.06.05-1.37.06-4.04.06s-2.98-.01-4.04-.06c-1.02-.05-1.58-.21-1.9-.36-.43-.19-.74-.42-1.05-.73-.31-.31-.54-.62-.73-1.05-.15-.32-.31-.88-.36-1.9-.05-1.06-.06-1.37-.06-4.04s.01-2.98.06-4.04c.05-1.02.21-1.58.36-1.9.19-.43.42-.74.73 1.05.31-.31.62-.54 1.05-.73.32-.15.88.31 1.9-.36C9.02 3.81 9.33 3.8 12 3.8zm0 3.3c-2.61 0-4.72 2.11-4.72 4.72S9.39 16.54 12 16.54s4.72-2.11 4.72-4.72S14.61 7.1 12 7.1zm0 7.64c-1.62 0-2.92-1.3-2.92-2.92s1.3-2.92 2.92-2.92 2.92 1.3 2.92 2.92-1.3 2.92-2.92 2.92zm4.33-7.82c-.6 0-1.08.48-1.08 1.08s.48 1.08 1.08 1.08 1.08-.48 1.08-1.08-.48-1.08-1.08-1.08z"/></svg>
-                    </a>
-                    <a href="https://www.tiktok.com/@alecgargett" target="_blank" rel="noopener noreferrer" aria-label="Follow Alec on TikTok"
-                    onmouseover="setIntroSmile(true)">
-                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                            <path fill="currentColor" d="M16.75 0h-3.06v16.22c0 1.48-1.2 2.68-2.68 2.68s-2.68-1.2-2.68-2.68 1.2-2.68 2.68-2.68c.28 0 .55.04.8.12v-3.08a6.3 6.3 0 0 0-.8-.05 5.76 5.76 0 0 0-5.77 5.77 5.76 5.76 0 0 0 5.77 5.77 5.76 5.76 0 0 0 5.77-5.77V7.66a8.48 8.48 0 0 0 4.27 1.17V5.67a4.97 4.97 0 0 1-4.27-4.9z"/>
-                        </svg>
-                    </a>
+  <nav class="main-nav">
+   <a href="#home"
+   onmouseover="setIntroSmile(false)">Home</a>
+   <a href="#plan"
+   onmouseover="setIntroSmile(false)">My plan</a>
+   <a href="#policy"
+   onmouseover="setIntroSmile(false)">My policies</a>
+   <!-- <a href="#about">About</a> -->
+   <a href="#contact"
+      onmouseover="setIntroSmile(true)">Contact
+   </a>
+  </nav>
 
-                    <a href="https://www.youtube.com/@aleconpolitics" target="_blank" rel="noopener noreferrer" aria-label="Follow Alec on Youtube"
-                    onmouseover="setIntroSmile(true)">
-                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM9.5 15.5V8.5l6 3.5-6 3.5z"/></svg>
-                    </a>
-                </div>
-                <div class="cta-buttons">
-                    <a href="#plan" class="btn btn-primary"
-                    onmouseover="setIntroSmile(false)">My plan</a>
-                    <a href="#policy" class="btn btn-primary"
-                    onmouseover="setIntroSmile(false)">My policies</a>
-                    <a href="#beyondpolicy" class="btn btn-primary"
-                    onmouseover="setIntroSmile(false)">Beyond policy</a>
-                    <!-- <a href="#about" class="btn btn-primary">About me</a> -->
-                    <a href="#contact" class="btn btn-secondary"
-                    onmouseover="setIntroSmile(true)">Get in touch</a>
-                </div>
-            </div>
-        </section>
+  <button id="theme-toggle-button" onclick="toggleTheme()"
+  onmouseover="setIntroSmile(true)">Toggle Theme</button>
+ </div>
+</header>
 
-        <section id="plan" class="content-section responsive-width">
-            <h2>My plan</h2>
-            <p>Hi. I'm Alec Gargett and I have a plan to:</p>
-            <ul>
-             <li>Solve the cost of living crisis while protecting and improving our quality of life, our environment, the beauty of our city and our suburbs, and our public services;</li>
-             <li>Solve the algae crisis and stop corporations and the government from contributing to the pollution crises that are causing it;</li>
-             <li>Solve the health care crisis, including the ramping crisis, and the aged care crisis;</li>
-             <li>Solve the underemployment crisis: ensure that every Australian is not only adequately trained, but also supported with job placements that make the best use of their skills, talent and knowledge;</li>
-             <li>Solve the corruption crisis, the parliamentary inefficiency crisis, and the accountability crisis: deliver integrity, transparency and competence in politics and a stronger, more democratic system, where politicians serve and represent their communities and pursue the interests of their electorate, not a separate agenda of a political party or corporations;</li>
-             <li>Solve the police staffing crisis;</li>
-             <li>Protect our children, women and men from unfair treatment and harm, including from gambling ads and other advertising. Within the limits of our political system, I'll do what I can to protect everyone from injustice.</li>
-            </ul>
-            <p>That might seem like a lot, but that's only because the bar has been set so low. Most of the above problems aren't hard to solve with the right plan, and enough people supporting it. <!-- Politicians just aren't really trying to solve them. Their skills are in campaigning and not policy, and think they will get paid just as much, or more, if they don't do the necessary policy work to solve anything. --></p> 
-            <p>There are two crucial components to my plan:</p>
-            <ul>
-             <li>Real policy solutions to all of the above, which are detailed below and will continue to be improved further over time, including through feedback from the electorate;</li>
-             <li>A viable and simple political strategy: draw positive attention to these policy ideas.</li>
-            </ul>
-            <p>We need to send a message to the federal and state government and the corporate political parties, and we need to create a new type of politics in Australia. To do that, we need to support a movement of candidates that demonstrate <em>through their own policies</em> that they are putting their electorate's goals ahead of their party's agenda or any other agenda, and that they have the necessary policy skills to contribute to solving our problems.</p>
-            <p>Together we can send a message to the government that if they won't do their job, we'll elect someone who will. This will result in a government that tries much harder to solve our problems. It will also result in a government that has the necessary policy skills to do so.</p>
-            <p>Sometimes it seems like most of our politicians and political parties aren't even trying. They play around the edges; throw a lot of money at problems without solving their causes; or choose policies that mitigate some problems while making other problems worse. Sometimes they choose a hopeless political strategy to boot, and for almost all political parties it's a divisive strategy.</p>
-            <p>My plan involves a comprehensive set of policy solutions, respect for the whole community, and a pragmatic strategy to support a democratic political movement beyond our own electorate here in Waite, and beyond state politics, to influence politics for the better at the federal and international levels. We need better policies and we need a better way of doing politics. If I'm elected, I'll use the platform of state parliament to do my part in both.</p>
-            <p>I will be explaining my policies in more detail between now and the election, not only here on the website, but in video form on platforms like Facebook, Instagram and Youtube. By the election in March next year, I'll get my plan across to as many people in Waite as I can, and I could use your support.</p>
-            <p>Following me on social media or video platforms so that you can see my policy videos and perhaps even share them around would be a great help. So would sharing this website with whoever you think might be interested.</p>
-            <p>
-            Best wishes,
-            <br>
-            Alec Gargett
-            </p>
-            </section>
+<main>
+<section id="home" class="page-intro">
+ <div class="intro-content-box responsive-width"
+ onclick="const introBox = document.querySelector('.intro-content-box');
+ if (introBox.classList.contains('smile')) {
+   setIntroSmile(false);
+ } else {
+   setIntroSmile(true);
+ }">
+  <h1>Alec Gargett</h1>
+  <h2 class="subtitle">Independent for Waite</h2>
 
-        <section id="qualityoflifecrisis" class="content-section responsive-width">
-             <h2>The Quality of Life Crisis</h2>
+  <div class="social-links">
+   <a href="https://www.facebook.com/profile.php?id=61582618821078" target="_blank" rel="noopener noreferrer" aria-label="Follow Alec on Facebook"
+   onmouseover="setIntroSmile(true)">
+    <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+   </a>
+   <a href="https://www.instagram.com/alecgargett/" target="_blank" rel="noopener noreferrer" aria-label="Follow Alec on Instagram"
+   onmouseover="setIntroSmile(true)">
+    <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 2c-2.72 0-3.05.01-4.12.06-1.06.05-1.79.22-2.42.47-.65.25-1.23.59-1.77 1.14-.54.54-.89 1.12-1.14 1.77-.25.63-.42 1.36-.47 2.42C2.01 8.95 2 9.28 2 12s.01 3.05.06 4.12c.05 1.06.22 1.79.47 2.42.25.65.59 1.23 1.14 1.77.54.54 1.12.89 1.77 1.14.63.25 1.36.42 2.42.47 1.07.05 1.4.06 4.12.06s3.05-.01 4.12-.06c1.06-.05 1.79-.22 2.42-.47.65-.25 1.23-.59 1.77-1.14.54-.54.89-1.12 1.14-1.77.25-.63.42-1.36.47-2.42.05-1.07.06-1.4.06-4.12s-.01-3.05-.06-4.12c-.05-1.06-.22-1.79-.47-2.42-.25-.65-.59-1.23-1.14-1.77-.54-.54-1.12-.89-1.77-1.14-.63-.25-1.36-.42-2.42-.47C15.05 2.01 14.72 2 12 2zm0 1.8c2.67 0 2.98.01 4.04.06 1.02.05 1.58.21 1.9.36.43.19.74.42 1.05.73.31.31.54.62.73 1.05.15.32.31.88.36 1.9.05 1.06.06 1.37.06 4.04s-.01 2.98-.06 4.04c-.05 1.02-.21 1.58-.36 1.9-.19.43-.42.74-.73 1.05-.31.31-.62.54-1.05.73-.32.15-.88.31-1.9.36-1.06.05-1.37.06-4.04.06s-2.98-.01-4.04-.06c-1.02-.05-1.58-.21-1.9-.36-.43-.19-.74-.42-1.05-.73-.31-.31-.54-.62-.73-1.05-.15-.32-.31-.88-.36-1.9-.05-1.06-.06-1.37-.06-4.04s.01-2.98.06-4.04c.05-1.02.21-1.58.36-1.9.19-.43.42-.74.73 1.05.31-.31.62-.54 1.05-.73.32-.15.88.31 1.9-.36C9.02 3.81 9.33 3.8 12 3.8zm0 3.3c-2.61 0-4.72 2.11-4.72 4.72S9.39 16.54 12 16.54s4.72-2.11 4.72-4.72S14.61 7.1 12 7.1zm0 7.64c-1.62 0-2.92-1.3-2.92-2.92s1.3-2.92 2.92-2.92 2.92 1.3 2.92 2.92-1.3 2.92-2.92 2.92zm4.33-7.82c-.6 0-1.08.48-1.08 1.08s.48 1.08 1.08 1.08 1.08-.48 1.08-1.08-.48-1.08-1.08-1.08z"/></svg>
+   </a>
+   <a href="https://www.tiktok.com/@alecgargett" target="_blank" rel="noopener noreferrer" aria-label="Follow Alec on TikTok"
+   onmouseover="setIntroSmile(true)">
+    <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+     <path fill="currentColor" d="M16.75 0h-3.06v16.22c0 1.48-1.2 2.68-2.68 2.68s-2.68-1.2-2.68-2.68 1.2-2.68 2.68-2.68c.28 0 .55.04.8.12v-3.08a6.3 6.3 0 0 0-.8-.05 5.76 5.76 0 0 0-5.77 5.77 5.76 5.76 0 0 0 5.77 5.77 5.76 5.76 0 0 0 5.77-5.77V7.66a8.48 8.48 0 0 0 4.27 1.17V5.67a4.97 4.97 0 0 1-4.27-4.9z"/>
+    </svg>
+   </a>
+   <a href="https://www.youtube.com/@aleconpolitics" target="_blank" rel="noopener noreferrer" aria-label="Follow Alec on Youtube"
+   onmouseover="setIntroSmile(true)">
+    <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM9.5 15.5V8.5l6 3.5-6 3.5z"/></svg>
+   </a>
+  </div>
+  
+  <div class="cta-buttons">
+   <a href="#plan" class="btn btn-primary"
+   onmouseover="setIntroSmile(false)">My plan</a>
+   <a href="#policy" class="btn btn-primary"
+   onmouseover="setIntroSmile(false)">My policies</a>
+   <a href="#beyondpolicy" class="btn btn-primary"
+   onmouseover="setIntroSmile(false)">Beyond policy</a>
+   <!-- <a href="#about" class="btn btn-primary">About me</a> -->
+   <a href="#contact" class="btn btn-secondary"
+   onmouseover="setIntroSmile(true)">Get in touch</a>
+  </div>
+ </div>
+</section>
 
-             <p>All of the crises I mentioned above, including the cost of living crisis, together cause an even bigger and more fundamental crisis: the quality of life crisis. Reducing the cost of living by reducing our quality of life is not a real solution, since fundamentally the main crisis we are trying to solve when we address cost of living is a quality of life crisis. For this reason, my policies address not only the cost of living crisis but all of the other crises listed above.</p>
-        </section>
-             
-        <section id="howtopay" class="content-section responsive-width">
-             <h2>How will we pay for this?</h2>
+<section id="plan" class="content-section responsive-width">
+    <h2>My plan</h2>
+    <p>Hi. I'm Alec Gargett and I have a plan to:</p>
+    <ul>
+     <li>Solve the cost of living crisis while protecting and improving our quality of life, our environment, the beauty of our city and our suburbs, and our public services;</li>
+     <li>Solve the algae crisis and stop corporations and the government from contributing to the pollution crises that are causing it;</li>
+     <li>Solve the health care crisis, including the ramping crisis, and the aged care crisis;</li>
+     <li>Solve the underemployment crisis: ensure that every Australian is not only adequately trained, but also supported with job placements that make the best use of their skills, talent and knowledge;</li>
+     <li>Solve the corruption crisis, the parliamentary inefficiency crisis, and the accountability crisis: deliver integrity, transparency and competence in politics and a stronger, more democratic system, where politicians serve and represent their communities and pursue the interests of their electorate, not a separate agenda of a political party or corporations;</li>
+     <li>Solve the police staffing crisis;</li>
+     <li>Protect our children, women and men from unfair treatment and harm, including from gambling ads and other advertising. Within the limits of our political system, I'll do what I can to protect everyone from injustice.</li>
+    </ul>
+    <p>That might seem like a lot, but that's only because the bar has been set so low. Most of the above problems aren't hard to solve with the right plan, and enough people supporting it. <!-- Politicians just aren't really trying to solve them. Their skills are in campaigning and not policy, and think they will get paid just as much, or more, if they don't do the necessary policy work to solve anything. --></p> 
+    <p>There are two crucial components to my plan:</p>
+    <ul>
+     <li>Real policy solutions to all of the above, which are detailed below and will continue to be improved further over time, including through feedback from the electorate;</li>
+     <li>A viable and simple political strategy: draw positive attention to these policy ideas.</li>
+    </ul>
+    <p>We need to send a message to the federal and state government and the corporate political parties, and we need to create a new type of politics in Australia. To do that, we need to support a movement of candidates that demonstrate <em>through their own policies</em> that they are putting their electorate's goals ahead of their party's agenda or any other agenda, and that they have the necessary policy skills to contribute to solving our problems.</p>
+    <p>Together we can send a message to the government that if they won't do their job, we'll elect someone who will. This will result in a government that tries much harder to solve our problems. It will also result in a government that has the necessary policy skills to do so.</p>
+    <p>Sometimes it seems like most of our politicians and political parties aren't even trying. They play around the edges; throw a lot of money at problems without solving their causes; or choose policies that mitigate some problems while making other problems worse. Sometimes they choose a hopeless political strategy to boot, and for almost all political parties it's a divisive strategy.</p>
+    <p>My plan involves a comprehensive set of policy solutions, respect for the whole community, and a pragmatic strategy to support a democratic political movement beyond our own electorate here in Waite, and beyond state politics, to influence politics for the better at the federal and international levels. We need better policies and we need a better way of doing politics. If I'm elected, I'll use the platform of state parliament to do my part in both.</p>
+    <p>I will be explaining my policies in more detail between now and the election, not only here on the website, but in video form on platforms like Facebook, Instagram and Youtube. By the election in March next year, I'll get my plan across to as many people in Waite as I can, and I could use your support.</p>
+    <p>Following me on social media or video platforms so that you can see my policy videos and perhaps even share them around would be a great help. So would sharing this website with whoever you think might be interested.</p>
+    <p>
+    Best wishes,
+    <br>
+    Alec Gargett
+    </p>
+    </section>
 
-             <p>Solving every major crisis we are facing will cost money. We need to build more hospitals and aged care, create more emergency departments, hire police support officers, expand the Pharmaceutical Benefits Scheme to include non-pharmaceutical essentials, and more, all detailed below. Luckily we have big corporations operating major export industries from South Australia with large profit margins that can afford to pay. You can read more about this in Policy 3.0 and in the article "Paying for good policy" underneath the policy section.</p>
-        </section>
+<section id="qualityoflifecrisis" class="content-section responsive-width">
+     <h2>The Quality of Life Crisis</h2>
 
-        <section id="policy" class="content-section responsive-width">
+     <p>All of the crises I mentioned above, including the cost of living crisis, together cause an even bigger and more fundamental crisis: the quality of life crisis. Reducing the cost of living by reducing our quality of life is not a real solution, since fundamentally the main crisis we are trying to solve when we address cost of living is a quality of life crisis. For this reason, my policies address not only the cost of living crisis but all of the other crises listed above.</p>
+</section>
+     
+<section id="howtopay" class="content-section responsive-width">
+     <h2>How will we pay for this?</h2>
 
-             <h2>My initial policies</h2>
+     <p>Solving every major crisis we are facing will cost money. We need to build more hospitals and aged care, create more emergency departments, hire police support officers, expand the Pharmaceutical Benefits Scheme to include non-pharmaceutical essentials, and more, all detailed below. Luckily we have big corporations operating major export industries from South Australia with large profit margins that can afford to pay. You can read more about this in Policy 3.0 and in the article "Paying for good policy" underneath the policy section.</p>
+</section>
 
-             <p>I will always be seeking to further improve my policies and ensure they are aligned with the wishes of the electorate, including in response to feedback from the people of Waite. Please send any feedback to <a href="mailto:alecgargett@gmail.com">alecgargett@gmail.com</a>.</p>
+<section id="policy" class="content-section responsive-width">
 
-             <h3>Interfering corporations and organised crime</h3>
+     <h2>My initial policies</h2>
 
-             <h4>Eliminate and punish harmful corporate interference in our elections and our parliament<br>
-              <small>(1.0_Corporate_Interference)</small>
-             </h4>
+     <p>I will always be seeking to further improve my policies and ensure they are aligned with the wishes of the electorate, including in response to feedback from the people of Waite. Please send any feedback to <a href="mailto:alecgargett@gmail.com">alecgargett@gmail.com</a>.</p>
 
-             <p>Corporations often interfere in elections and in parliament to prevent policies that would benefit most people but reduce their profits. Some of these businesses, including at least some casinos, have ties to organised crime and money laundering. Although large political donations have been banned in South Australia, there are still legal and illegal means that they may attempt to use to influence elections. To prevent this we need to:</p>
-             <ul>
-              <li>Prohibit interference in elections or in politics to prevent policies that would benefit most people but reduce one's profits, and retroactively include interference in recent elections.</li>
-              <li>Ensure punishments are severe enough to successfully discourage this type of interference in our democracy; consider including asset confiscation for corporations and gaol time for individuals; consider setting up government-owned competitors in any industries guilty of these types of crimes.</li>
-              <li>Provide ICAC the resources and oversight to ensure they thoroughly investigate corporations, politicians and political parties for this type of interference in recent elections.</li>
-             </ul>
+     <div id="policy-contents" class="policy-toc">
+      <ol class="toc-list">
+          <li>
+              <a href="#1.0_Corporate_Interference">Stop harmful corporate interference in our elections and our parliament</a>
+          </li>
+          <li>
+              <a href="#2.0_QLC">Create a Quality of Life Commission</a>
+          </li>
+          <li>
+              <a href="#3.0_Resource_Pricing">Stop giving our resource wealth away (almost) for free</a>
+          </li>
+          <li>
+              <a href="#4.0_Cheap_Essentials">Provide cheap electricity and cheap healthy foods</a>
+          </li>
+          <li>
+              <a href="#5.0_Efficiency_Loans">Provide HECS-style loans for efficiency upgrades</a>
+          </li>
+          <li>
+              <a href="#6.0_Keep_Homes">Keep people in their homes</a>
+              <ul class="sub-toc-list">
+                  <li><a href="#6.1_Right_To_Reside">Charge landlords if they don't rent or sell to the rightful resident</a> (6.1)</li>
+                  <li><a href="#6.2_Rightful_Resident_Loans">Provide HECS-style loans to assist the rightful resident at a regulated price</a> (6.2)</li>
+              </ul>
+          </li>
+          <li>
+              <a href="#7.0_SAEC">Create a South Australian government employment service</a>
+          </li>
+          <li>
+              <a href="#8.0_Reduce_Immigration">Maintain the refugee intake but reduce net immigration</a>
+          </li>
+          <li>
+              <a href="#9.0_Better_Housing">Build housing the right way</a>
+          </li>
+          <li>
+              <a href="#10.0_Better_Care">Provide abundant, high quality aged care and at-home urgent care</a>
+          </li>
+          <li>
+              <a href="#11.0_More_EDs">Increase the number of hospitals, emergency departments and staff</a>
+          </li>
+          <li>
+              <a href="#12.0_Police_Support">Solve the police staffing crisis</a>
+          </li>
+          <li>
+              <a href="#13.0_Algae_Solution">Solve the algae crisis, and the pollution crises that are causing it</a>
+          </li>
+          <li>
+              <a href="#14.0_Clean_Air">Reduce traffic congestion, air pollution and atmospheric pollution</a>
+          </li>
+          <li>
+              <a href="#15.0_Belair_Train">Improve the Belair train line</a>
+          </li>
+          <li>
+              <a href="#16.0_Affordable_Options">Make environmentally friendly choices more affordable</a>
+          </li>
+          <li>
+              <a href="#17.0_Democratise">Make our system more democratic</a>
+              <ul class="sub-toc-list">
+                  <li><a href="#17.1_ECSA_Funding">Provide ECSA with adequate funding</a> (17.1)</li>
+                  <li><a href="#17.2_Spending_Cap">Tighten the cap on candidate spending</a> (17.2)</li>
+                  <li><a href="#17.3_Campaigning_Ban">Ban political campaigning at polling booths</a> (17.3)</li>
+                  <li><a href="#17.4_Address_End">End the requirement for political candidates to put an exact address</a> (17.4)</li>
+              </ul>
+          </li>
+          <li>
+              <a href="#18.0_Reclaim_Land">Keep South Australian land in South Australian hands</a>
+          </li>
+          <li>
+              <a href="#19.0_Environmental_Health">Prevent harm to public wellbeing</a>
+              <ul class="sub-toc-list">
+                   <li><a href="#19.1_Right_To_Housing">Ensure adequate emergency housing for the homeless</a> (19.1)</li>
+                   <li><a href="#19.2_Environmental_Health">Address the environmental causes of mental illness and violence</a> (19.2)</li>
+                   <li><a href="#19.3_Regulate_Advertising">Prevent harm from advertising and provide better info</a> (19.3)</li>
+                   <li><a href="#19.4_Free_Sport">Free sport and healthy activity classes</a> (19.4)</li>
+                   <li><a href="#19.5_Healthier_Drinks">More diet soft drink than regular soft drink</a> (19.5)</li>
+              </ul>
+          </li>
+          <li>
+              <a href="#20.0_Non-violence">Support any measure against cruelty and violence towards animals</a> (20.0)
+          </li>
+      </ol>
+  </div>
 
-             <h3>Quality of life and cost of essentials</h3>
+     <h3>Interfering corporations and organised crime</h3>
 
-             <h4>Create a Quality of Life Commission<br>
-              <small>(2.0_QLC)</small>
-             </h4>
+     <h4 id="1.0_Corporate_Interference">Stop harmful corporate interference in our elections and our parliament<br>
+      <small>(1.0_Corporate_Interference)</small>
+     </h4>
 
-             <p>Solve the cost of living crisis and the quality of life crisis, by creating a Cost of Living and Quality of Life Commission, which I will refer to here simply as the Quality of Life Commission. Give the Quality of Life Commission the power to:</p>
-             <ul>
-              <li>2.1 Regulate against corporations and landlords contributing to the quality of life crisis;</li>
-              <li>2.2 Charge those corporations and landlords for harmful, inflationary or otherwise costly behaviour;</li>
-              <li>2.3 Spend this revenue on reducing the cost of living and improving quality of life further. Advocate for constitutional reform that will allow us to further improve this commission by allowing it to implement its own variable charges.</li>
-             </ul>
-             
-             <p>The Quality of Life Commission will also have the mandate and resources necessary to investigate the government itself for inefficient spending such as private contractor rorts, and to close regulatory loopholes in any sector that is being taken advantage of by bad actors.</p>
-              
-             <p>This Commission will greatly increase the speed and efficiency with which we can address the quality of life crisis, compared to relying exclusively on the slow processes of a parliament that lacks the expertise for technical matters. It also means that parliament can direct the Quality of Life Commission to implement policies that require ongoing regulatory involvement such as the following:</p>
+     <p>Corporations often interfere in elections and in parliament to prevent policies that would benefit most people but reduce their profits. Some of these businesses, including at least some casinos, have ties to organised crime and money laundering. Although large political donations have been banned in South Australia, there are still legal and illegal means that they may attempt to use to influence elections. To prevent this we need to:</p>
+     <ul>
+      <li>1.1 Prohibit interference in elections or in politics to prevent policies that would benefit most people but reduce one's profits, and retroactively include interference in recent elections.</li>
+      <li>1.2 Ensure punishments are severe enough to successfully discourage this type of interference in our democracy; consider including asset confiscation for corporations and gaol time for individuals; consider setting up government-owned competitors in any industries guilty of these types of crimes.</li>
+      <li>1.3 Provide ICAC the resources and oversight to ensure they thoroughly investigate corporations, politicians and political parties for this type of interference in recent elections.</li>
+     </ul>
 
-             <h4>Stop giving our resource wealth away (almost) for free
-             <br>
-               <small>(3.0_Resource_Pricing)</small>
-              </h4>
+     <h3>Quality of life and cost of essentials</h3>
 
-             <p>Natural resources under the ground legally belong to the state, which means they belong to all South Australians. Giving away these resources to large corporations for pennies is one of the biggest rorts in our history. Ideally, the Quality of Life Commission would directly charge whatever price maximises benefits for South Australians, but this may require constitutional reform. Until then, the Quality of Life Commission will instead recommend minimum resource prices to parliament, both for existing mines and separately as the reserve price when selling resources for new mines at auction. These resource sales will fund not only the Commission itself but all of the other policies below, including cost of living measures. Other environmentally costly international export industries may also be charged for those exports, where the Commission regards these charges as necessary to fund necessary policies, or otherwise beneficial to quality of life in Australia.</p>
+     <h4 id="2.0_QLC">Create a Quality of Life Commission<br>
+      <small>(2.0_QLC)</small>
+     </h4>
 
-             <h4>Provide cheap electricity and cheap healthy foods<br>
-              <small>(4.0_Cheap_Essentials)</small>
-             </h4>
+     <p>Solve the cost of living crisis and the quality of life crisis, by creating a Cost of Living and Quality of Life Commission, which I will refer to here simply as the Quality of Life Commission. Give the Quality of Life Commission the power to:</p>
+     <ul>
+      <li>2.1 Regulate against corporations and landlords contributing to the quality of life crisis;</li>
+      <li>2.2 Charge those corporations and landlords for harmful, inflationary or otherwise costly behaviour;</li>
+      <li>2.3 Spend this revenue on reducing the cost of living and improving quality of life further. Advocate for constitutional reform that will allow us to further improve this commission by allowing it to implement its own variable charges.</li>
+     </ul>
+     
+     <p>The Quality of Life Commission will also have the mandate and resources necessary to investigate the government itself for inefficient spending such as private contractor rorts, and to close regulatory loopholes in any sector that is being taken advantage of by bad actors.</p>
+      
+     <p>This Commission will greatly increase the speed and efficiency with which we can address the quality of life crisis, compared to relying exclusively on the slow processes of a parliament that lacks the expertise for technical matters. It also means that parliament can direct the Quality of Life Commission to implement policies that require ongoing regulatory involvement such as the following:</p>
 
-             <p>Reduce prices on essentials like electricity, and healthy foods for South Australians through regulation and compensation. In a similar manner to the Pharmaceutical Benefits Scheme, the Quality of Life Commission will regulate to reduce the price of these essentials for South Australians, and compensate only the amount needed to ensure adequate supply and good quality. Reducing the cost of electricity will help to reduce pollution, by helping people switch from polluting gas and wood burning to electricity.</p>
+     <h4 id="3.0_Resource_Pricing">Stop giving our resource wealth away (almost) for free
+     <br>
+       <small>(3.0_Resource_Pricing)</small>
+      </h4>
 
-             <h4>Provide HECS-style loans for efficiency upgrades<br>
-              <small>(5.0_Efficiency_Loans)</small>
-             </h4>
+     <p>Natural resources under the ground legally belong to the state, which means they belong to all South Australians. Giving away these resources to large corporations for pennies is one of the biggest rorts in our history. Ideally, the Quality of Life Commission would directly charge whatever price maximises benefits for South Australians, but this may require constitutional reform. Until then, the Quality of Life Commission will instead recommend minimum resource prices to parliament, both for existing mines and separately as the reserve price when selling resources for new mines at auction. These resource sales will fund not only the Commission itself but all of the other policies below, including cost of living measures. Other environmentally costly international export industries may also be charged for those exports, where the Commission regards these charges as necessary to fund necessary policies, or otherwise beneficial to quality of life in Australia.</p>
 
-             <p>Provide HECS-style loans for purchases that reduce costs and increase efficiency such as purchasing electric cars, switching to electric heating, adding solar water heating, or repainting a dark roof to a heat-reflecting white. This will be designed to avoid causing increases in prices, and even reduce prices, by providing only enough to make the difference up to a target price.</p>
+     <h4 id="4.0_Cheap_Essentials">Provide cheap electricity and cheap healthy foods<br>
+      <small>(4.0_Cheap_Essentials)</small>
+     </h4>
 
-             <h3>Keep people in their homes</h3>
-             (6.0_Keep_Homes)
+     <p>Reduce prices on essentials like electricity, and healthy foods for South Australians through regulation and compensation. In a similar manner to the Pharmaceutical Benefits Scheme, the Quality of Life Commission will regulate to reduce the price of these essentials for South Australians, and compensate only the amount needed to ensure adequate supply and good quality. Reducing the cost of electricity will help to reduce pollution, by helping people switch from polluting gas and wood burning to electricity.</p>
 
-             <p>The first job of the Quality of Life Commission would be to keep people in their homes.</p>
+     <h4 id="5.0_Efficiency_Loans">Provide HECS-style loans for efficiency upgrades<br>
+      <small>(5.0_Efficiency_Loans)</small>
+     </h4>
 
-             <p>We've all heard stories of long-term renters being kicked out of their home where they'd been living for years or decades, just so that the property can be sold to someone with more money. Most of us recognise this as an injustice, and it also incentivises investors owning a huge number of investment properties. To solve this we can:</p>
+     <p>Provide HECS-style loans for purchases that reduce costs and increase efficiency such as purchasing electric cars, switching to electric heating, adding solar water heating, or repainting a dark roof to a heat-reflecting white. This will be designed to avoid causing increases in prices, and even reduce prices, by providing only enough to make the difference up to a target price.</p>
 
-             <h4>Charge landlords if they don't rent or sell to the rightful resident<br>
-    <small>(6.1_Right_To_Reside)</small>
+     <h3 id="6.0_Keep_Homes">Keep people in their homes<br>
+      <small>(6.0_Keep_Homes)</small>
+      </h3>
+
+     <p>The first job of the Quality of Life Commission would be to keep people in their homes.</p>
+
+     <p>We've all heard stories of long-term renters being kicked out of their home where they'd been living for years or decades, just so that the property can be sold to someone with more money. Most of us recognise this as an injustice, and it also incentivises investors owning a huge number of investment properties. To solve this we can:</p>
+
+     <h4 id="6.1_Right_To_Reside">Charge landlords if they don't rent or sell to the rightful resident<br>
+<small>(6.1_Right_To_Reside)</small>
 </h4>             
-             <p>Incentivise property investors to do the right thing, by charging them if they do the wrong thing. For example, property investors will be charged if they have evicted someone from their home just to sell the property to someone wealthier, or if they have otherwise failed to allow the property to be used by the person or family with the greatest moral right to the property. The Quality of Life Commission will be instructed to devise a system for determining and enforcing this, and will determine the rate of these variable charges to ensure a fair price.</p>
+     <p>Incentivise property investors to do the right thing, by charging them if they do the wrong thing. For example, property investors will be charged if they have evicted someone from their home just to sell the property to someone wealthier, or if they have otherwise failed to allow the property to be used by the person or family with the greatest moral right to the property. The Quality of Life Commission will be instructed to devise a system for determining and enforcing this, and will determine the rate of these variable charges to ensure a fair price.</p>
 
-             <h4>Provide HECS-style loans to assist the rightful resident at a regulated price<br>
-    <small>(6.2_Rightful_Resident_Loans)</small>
+     <h4 id="6.2_Rightful_Resident_Loans">Provide HECS-style loans to assist the rightful resident at a regulated price<br>
+<small>(6.2_Rightful_Resident_Loans)</small>
 </h4>
 
-             <p>Once the above policies are implemented, we can assist all long-term renters to buy their residence, and keep family homes in the family where desired, by allowing HECS-style loans for the buyer.</p>
-             <p>My policies will prevent this from inflating housing prices further for two reasons:</p>
-              <ul>
-               <li>Firstly, the HECS-style loan will only be exactly the size necessary to allow the buyer to make up the difference in their buying power to a fair price, and only the prospective buyer with the greatest moral right to purchase will get access to this loan;</li>
-               <li>Secondly, due to Policy 6.1 above, the property investor will be incentivised to sell to the rightful owner at this target price, rather than sell to someone else. The Quality of Life Commission will adjust such charges on property investors by whatever amount needed to achieve a sale at a fair price.</li>
-              </ul>
+     <p>Once the above policies are implemented, we can assist all long-term renters to buy their residence, and keep family homes in the family where desired, by allowing HECS-style loans for the buyer.</p>
+     <p>My policies will prevent this from inflating housing prices further for two reasons:</p>
+      <ul>
+       <li>Firstly, the HECS-style loan will only be exactly the size necessary to allow the buyer to make up the difference in their buying power to a fair price, and only the prospective buyer with the greatest moral right to purchase will get access to this loan;</li>
+       <li>Secondly, due to Policy 6.1 above, the property investor will be incentivised to sell to the rightful owner at this target price, rather than sell to someone else. The Quality of Life Commission will adjust such charges on property investors by whatever amount needed to achieve a sale at a fair price.</li>
+      </ul>
 
-             <!-- <h4>Housing price growth limit</h4>
+     <!-- <h4>Housing price growth limit</h4>
 
-             <p>Democratically determine an upper limit on yearly housing price growth. The Quality of Life Commission will enforce this limit with regulations on property investments, explained in Policy below. The Quality of Life Commission will also devise a new housing price index that applies the constant quality principle including property size and location, to ensure that we are not only addressing the nominal cost of housing, but also improving the quality of housing that South Australians can afford.</p> -->
+     <p>Democratically determine an upper limit on yearly housing price growth. The Quality of Life Commission will enforce this limit with regulations on property investments, explained in Policy below. The Quality of Life Commission will also devise a new housing price index that applies the constant quality principle including property size and location, to ensure that we are not only addressing the nominal cost of housing, but also improving the quality of housing that South Australians can afford.</p> -->
 
-             <h3>Underemployment and immigration</h3>
+     <h3>Underemployment and immigration</h3>
 
-             <h4>Create a South Australian government employment service<br>
-    <small>(7.0_SAEC)</small>
+     <h4 id="7.0_SAEC">Create a South Australian government employment service<br>
+<small>(7.0_SAEC)</small>
 </h4>
 
-             <p>Provide government-supported apprenticeships and job placements for all unemployed and underemployed Australians who want them by creating a South Australian government employment service. Expert in the field, David O'Halloran, PhD, recommends creating government employment services at the state level rather than at the federal level. Currently we have neither. The existing private services are inadequate. With the support of the funding from the Quality of Life Commission's charges, the South Australian government employment service will ensure that everyone has the support they need to do the work that will most benefit South Australians, and that businesses that need support to help with this will be given that support.</p>
+     <p>Provide government-supported apprenticeships and job placements for all unemployed and underemployed Australians who want them by creating a South Australian government employment service. Expert in the field, David O'Halloran, PhD, recommends creating government employment services at the state level rather than at the federal level. Currently we have neither. The existing private services are inadequate. With the support of the funding from the Quality of Life Commission's charges, the South Australian government employment service will ensure that everyone has the support they need to do the work that will most benefit South Australians, and that businesses that need support to help with this will be given that support.</p>
 
-             <h4>Maintain the refugee intake but reduce net immigration<br>
-    <small>(8.0_Reduce_Immigration)</small>
+     <h4 id="8.0_Reduce_Immigration">Maintain the refugee intake but reduce net immigration<br>
+<small>(8.0_Reduce_Immigration)</small>
 </h4>
 
-             <p>During the Covid border closures, rents became cheaper. When businesses opened back up again, but international borders were still shut, unemployment dropped to the lowest rate in 50 years. And these are only the short-term effects. In the long-term, the quality of housing we are living in will continue to get worse if the population density in our cities continues to grow due to an intake of millions per decade, the rate that corporations and their political parties have chosen. It also increasingly makes it hard to solve other problems: harder to build enough public transport and eliminate traffic congestion and transport pollution, harder to reduce harm to our environment and animals through land use, resource use, production, construction and consumption.</p>
+     <p>During the Covid border closures, rents became cheaper. When businesses opened back up again, but international borders were still shut, unemployment dropped to the lowest rate in 50 years. And these are only the short-term effects. In the long-term, the quality of housing we are living in will continue to get worse if the population density in our cities continues to grow due to an intake of millions per decade, the rate that corporations and their political parties have chosen. It also increasingly makes it hard to solve other problems: harder to build enough public transport and eliminate traffic congestion and transport pollution, harder to reduce harm to our environment and animals through land use, resource use, production, construction and consumption.</p>
 
-             <p>Policy 7.0 above will reduce reliance on skilled immigration. Training underemployed and undertrained Australians and providing more paid work experience opportunities will negate the need for bringing so many skilled visa holders into South Australia. We can address almost all of our real skills shortages locally, not only through tertiary education, but also through government-supported and business-supported apprenticeships, other on-the-job training, and other paid work experience opportunities, for people who are already here, rather than bringing additional people in from interstate and overseas to compensate for our lack of proper training systems and job experience opportunities.</p>
+     <p>Policy 7.0 above will reduce reliance on skilled immigration. Training underemployed and undertrained Australians and providing more paid work experience opportunities will negate the need for bringing so many skilled visa holders into South Australia. We can address almost all of our real skills shortages locally, not only through tertiary education, but also through government-supported and business-supported apprenticeships, other on-the-job training, and other paid work experience opportunities, for people who are already here, rather than bringing additional people in from interstate and overseas to compensate for our lack of proper training systems and job experience opportunities.</p>
 
-             <p>Although immigration policy is primarily a federal government matter, it is important for me to have policies on this at the state level, since it sends a message to the federal government. Meanwhile, if implemented, Policy 7.0 will reduce the demand for skilled workers to move to South Australia, reduce the need for state-sponsored skilled visas, and reduce the demand for the federal government to hand out other skilled visas.</p>
+     <p>Although immigration policy is primarily a federal government matter, it is important for me to have policies on this at the state level, since it sends a message to the federal government. Meanwhile, if implemented, Policy 7.0 will reduce the demand for skilled workers to move to South Australia, reduce the need for state-sponsored skilled visas, and reduce the demand for the federal government to hand out other skilled visas.</p>
 
-             <p>The Albanese government's current plan is net immigration of around 230 000 per year, a rate of 2.3 million people per decade. The opposition's plan is to reduce this to a net intake of 130 000 per year, a rate of 1.3 million per decade. Neither has a comprehensive plan like my plan above to end our reliance on high rates of worker immigration.
-             </p>
+     <p>The Albanese government's current plan is net immigration of around 230 000 per year, a rate of 2.3 million people per decade. The opposition's plan is to reduce this to a net intake of 130 000 per year, a rate of 1.3 million per decade. Neither has a comprehensive plan like my plan above to end our reliance on high rates of worker immigration.
+     </p>
 
-             <p>One might think that there isn't much that can be done about this at the state parliament level, but we can do a lot:</p>
-             <ul>
-              <li>Reduce the need, demand, and excuses for skilled visas by providing adequate training and job placements for people already here, as explained above</li>
-              <li>Reduce or cease state government requests for skilled visas from the federal government</li>
-              <li>Use the platform of state parliament to call on the federal government to further reduce unnecessary visas</li>
-              <li>Regulate the entry of skilled visa holders into South Australia specifically</li>
-             </ul>
+     <p>One might think that there isn't much that can be done about this at the state parliament level, but we can do a lot:</p>
+     <ul>
+      <li>Reduce the need, demand, and excuses for skilled visas by providing adequate training and job placements for people already here, as explained above</li>
+      <li>Reduce or cease state government requests for skilled visas from the federal government</li>
+      <li>Use the platform of state parliament to call on the federal government to further reduce unnecessary visas</li>
+      <li>Regulate the entry of skilled visa holders into South Australia specifically</li>
+     </ul>
 
-             <h4>Build housing the right way<br>
-    <small>(9.0_Better_Housing)</small>
+     <h4 id="9.0_Better_Housing">Build housing the right way<br>
+<small>(9.0_Better_Housing)</small>
 </h4>
 
-             <p>The above policies may be enough to solve the housing affordability crisis, but we also need to improve the quality of housing that people can afford by building the right type of high-quality housing in the right locations, instead of destroying the beauty of our existing suburbs and wasting land on the outskirts with a lack of proper planning. With all of the above policies, we won't need to sacrifice our quality of life to reduce the cost of living any longer. We can replace ugly buildings with beautiful ones, instead of replacing beautiful buildings and gardens with ugly ones, and we can plan new land releases better to use the land more efficiently with higher quality housing with a wide variety of densities, along with adequate space for new hospitals and other necessary amenities and infrastructure.</p>
+     <p>The above policies may be enough to solve the housing affordability crisis, but we also need to improve the quality of housing that people can afford by building the right type of high-quality housing in the right locations, instead of destroying the beauty of our existing suburbs and wasting land on the outskirts with a lack of proper planning. With all of the above policies, we won't need to sacrifice our quality of life to reduce the cost of living any longer. We can replace ugly buildings with beautiful ones, instead of replacing beautiful buildings and gardens with ugly ones, and we can plan new land releases better to use the land more efficiently with higher quality housing with a wide variety of densities, along with adequate space for new hospitals and other necessary amenities and infrastructure.</p>
 
-             <h3>Hospitals, aged care and urgent care
-             </h3>
+     <h3>Hospitals, aged care and urgent care
+     </h3>
 
-             <h4>Provide abundant, high quality aged care and at-home urgent care<br>
-    <small>(10.0_Better_Care)</small>
+     <h4 id="10.0_Better_Care">Provide abundant, high quality aged care and at-home urgent care<br>
+<small>(10.0_Better_Care)</small>
 </h4>
 
-             <p>To improve quality of life and reduce the burden on our hospital system we can:</p>
-             <ul>
-              <li>10.1 Build government-owned aged care centres to ensure adequate supply of high quality care at affordable prices</li>
-              <li>10.2 Fund a program of roving nurses to provide urgent care in people's homes</li>
-             </ul>
+     <p>To improve quality of life and reduce the burden on our hospital system we can:</p>
+     <ul>
+      <li>10.1 Build government-owned aged care centres to ensure adequate supply of high quality care at affordable prices</li>
+      <li>10.2 Fund a program of roving nurses to provide urgent care in people's homes</li>
+     </ul>
 
-             <p>The Quality of Life Commission will pay for the above with measures such as Policy 3.0 above.</p>
+     <p>The Quality of Life Commission will pay for the above with measures such as Policy 3.0 above.</p>
 
-             <h4>Increase the number of hospitals, emergency departments and staff. Reopen the Blackwood Hospital and the Repat emergency department<br>
-    <small>(11.0_More_EDs)</small>
+     <h4 id="11.0_More_EDs">Increase the number of hospitals, emergency departments and staff. Reopen the Blackwood Hospital and the Repat emergency department<br>
+<small>(11.0_More_EDs)</small>
 </h4>
 
-             <p>Increase not only the size of emergency departments and hospitals, but also the number of them, the number of staff, and the number, quality and affordability of aged care centres. We can:</p>
-             
-             <ul>
-               <li>Where feasible, reopen hospitals that are no longer being used as hospitals, such as the Blackwood Hospital;</li>
-               <li>Where feasible, reopen emergency departments that have been closed, like the emergency department at the Repat;</li>
-               <li>Build new hospitals, and design them to efficiently provide the most desperately needed services;</li>
-               <li>Allow more Australians to study clinical psychology, especially Masters programs, and medical degrees in South Australia;</li>
-               <li>Allow psychologists to assist psychiatrists in mental hospitals;</li>
-               <li>Hire more social workers and occupational therapists to assist psychiatrists in our mental hospitals;</li>
-               <li>Investigate the viability of specialist graduate medical programs at our universities, so that qualified health professionals can become specialist doctors by learning only what is relevant to a chosen specialty.</li>
-             </ul>
+     <p>Increase not only the size of emergency departments and hospitals, but also the number of them, the number of staff, and the number, quality and affordability of aged care centres. We can:</p>
+     
+     <ul>
+       <li>Where feasible, reopen hospitals that are no longer being used as hospitals, such as the Blackwood Hospital;</li>
+       <li>Where feasible, reopen emergency departments that have been closed, like the emergency department at the Repat;</li>
+       <li>Build new hospitals, and design them to efficiently provide the most desperately needed services;</li>
+       <li>Allow more Australians to study clinical psychology, especially Masters programs, and medical degrees in South Australia;</li>
+       <li>Allow psychologists to assist psychiatrists in mental hospitals;</li>
+       <li>Hire more social workers and occupational therapists to assist psychiatrists in our mental hospitals;</li>
+       <li>Investigate the viability of specialist graduate medical programs at our universities, so that qualified health professionals can become specialist doctors by learning only what is relevant to a chosen specialty.</li>
+     </ul>
 
-             <h3>Policing</h3>
+     <h3>Policing</h3>
 
-              <h4>Solve the police staffing crisis<br>
-    <small>(12.0_Police_Support)</small>
+      <h4 id="12.0_Police_Support">Solve the police staffing crisis<br>
+<small>(12.0_Police_Support)</small>
 </h4>
 
-              <p>Provide funding to create a new unarmed, plain-clothed position called a Police Support Officer to support SAPOL in their work, and hire at least 200 people for this position. Provide funding for the police to improve their hiring processes with better objective testing of applicants and better job performance assessment processes, and for experts at our universities to carry out helpful studies into better hiring procedures.</p>
+      <p>Provide funding to create a new unarmed, plain-clothed position called a Police Support Officer to support SAPOL in their work, and hire at least 200 people for this position. Provide funding for the police to improve their hiring processes with better objective testing of applicants and better job performance assessment processes, and for experts at our universities to carry out helpful studies into better hiring procedures.</p>
 
-             <h3>Pollution, traffic congestion and the algae crisis
-             </h3>
+     <h3>Pollution, traffic congestion and the algae crisis
+     </h3>
 
-              <h4>Solve the algae crisis, and the pollution crises that are causing it<br>
-    <small>(13.0_Algae_Solution)</small>
+      <h4 id="13.0_Algae_Solution">Solve the algae crisis, and the pollution crises that are causing it<br>
+<small>(13.0_Algae_Solution)</small>
 </h4>
 
-              <p><!-- Tax exports that are contributing to the crisis. Use this money to help businesses reduce their pollution and reduce pollution caused by the government. While we can't solve the climate crisis by ourselves, we can do much more to tackle the pollution crises here in South Australia, and have an influence on the rest of the country, and thereby on the rest of the world. --> I am working on a video explaining this policy in more detail, which I plan to release by December 18 at the latest.</p>
+      <p><!-- Tax exports that are contributing to the crisis. Use this money to help businesses reduce their pollution and reduce pollution caused by the government. While we can't solve the climate crisis by ourselves, we can do much more to tackle the pollution crises here in South Australia, and have an influence on the rest of the country, and thereby on the rest of the world. --> I am working on a video explaining this policy in more detail, which I plan to release by December 18 at the latest.</p>
 
-              <h4>Reduce traffic congestion, air pollution and atmospheric pollution<br>
-               <small>(14.0_Clean_Air)</small>
-              </h4>
+      <h4 id="14.0_Clean_Air">Reduce traffic congestion, air pollution and atmospheric pollution<br>
+       <small>(14.0_Clean_Air)</small>
+      </h4>
 
-              <p>14.1 Reduce all major pollutants by over 50% by 2030, aiming for at least 75% total reduction in CO<sub>2</sub>e in both GWP20 and GWP100. Major atmospheric pollutants in South Australia are carbon dioxide (CO<sub>2</sub>), methane, nitrous oxide (N<sub>2</sub>O), nitrogen dioxide (NO<sub>2</sub>), and particulate matter including black carbon.</p>
+      <p>14.1 Reduce all major pollutants by over 50% by 2030, aiming for at least 75% total reduction in CO<sub>2</sub>e in both GWP20 and GWP100. Major atmospheric pollutants in South Australia are carbon dioxide (CO<sub>2</sub>), methane, nitrous oxide (N<sub>2</sub>O), nitrogen dioxide (NO<sub>2</sub>), and particulate matter including black carbon.</p>
 
-              <p>14.2 Provide much higher frequency and higher quality public transport and workplace policies that reduce commuting at rush hour. Greatly increase the frequency of bus services with a new electric bus fleet. Make every second bus on each route free. Introduce more bus lanes to bypass traffic. A higher frequency of public transport services will not only reduce traffic congestion, but also reduce overcrowding on the buses, trains and trams themselves.</p>
+      <p>14.2 Provide much higher frequency and higher quality public transport and workplace policies that reduce commuting at rush hour. Greatly increase the frequency of bus services with a new electric bus fleet. Make every second bus on each route free. Introduce more bus lanes to bypass traffic. A higher frequency of public transport services will not only reduce traffic congestion, but also reduce overcrowding on the buses, trains and trams themselves.</p>
 
-              <p>14.3 Reduce agricultural emissions by taxing the export of slaughterhouse products according to the total pollution created.</p>
+      <p>14.3 Reduce agricultural emissions by taxing the export of slaughterhouse products according to the total pollution created.</p>
 
-              <p>14.4 Make it easier to buy an EV:</p>
-              <ul>
-               <li>Eliminate taxes on electric vehicle purchases;</li>
-               <li>Provide HECS-style loans for buying an EV under Policy 5.0_Efficiency_Loans.</li>
-               <li>Make charging stations free at times when there is an oversupply of electricity on the grid;</li>
-               <li>Require an adequate number of charging stations in every parking area;</li>
-               <li>Extend Labor's home battery scheme to vehicle to home (V2H) chargers, so that people can use their EV battery as a home battery.</li>
-              </ul>
+      <p>14.4 Make it easier to buy an EV:</p>
+      <ul>
+       <li>Eliminate taxes on electric vehicle purchases;</li>
+       <li>Provide HECS-style loans for buying an EV under Policy 5.0_Efficiency_Loans.</li>
+       <li>Make charging stations free at times when there is an oversupply of electricity on the grid;</li>
+       <li>Require an adequate number of charging stations in every parking area;</li>
+       <li>Extend Labor's home battery scheme to vehicle to home (V2H) chargers, so that people can use their EV battery as a home battery.</li>
+      </ul>
 
-              <p>South Australia gets about 80% of our electricity from renewables, which puts us second after Tasmania, and first when it comes to solar and wind combined. In fact, when it comes to solar and wind combined, we are ahead of every country in the world, and ahead of every state in the United States. This puts us in a unique position to lead the entire world when it comes to addressing the other two biggest pollution sectors: transport and agriculture. Electricity production makes up less than 40% of global greenhouse gas pollution, and less than 20% in Australia, so it is essential that South Australia demonstrate to the whole world how to eliminate pollution in other sectors in a way that provides maximum benefit to the state.</p>
+      <p>South Australia gets about 80% of our electricity from renewables, which puts us second after Tasmania, and first when it comes to solar and wind combined. In fact, when it comes to solar and wind combined, we are ahead of every country in the world, and ahead of every state in the United States. This puts us in a unique position to lead the entire world when it comes to addressing the other two biggest pollution sectors: transport and agriculture. Electricity production makes up less than 40% of global greenhouse gas pollution, and less than 20% in Australia, so it is essential that South Australia demonstrate to the whole world how to eliminate pollution in other sectors in a way that provides maximum benefit to the state.</p>
 
-              <h4>Improve the Belair train line<br>
-               <small>(15.0_Belair_Train)</small>
-              </h4>
+      <h4 id="15.0_Belair_Train">Improve the Belair train line<br>
+       <small>(15.0_Belair_Train)</small>
+      </h4>
 
-              <p>Currently trains going in opposite directions share the same track on the Belair line and have to wait for each other to pass. Reduce this issue by duplicating the track wherever feasible. Once these works are done, electrify the line. Once these upgrades are complete, expand the Belair train line to Mount Barker.</p>
+      <p>Currently trains going in opposite directions share the same track on the Belair line and have to wait for each other to pass. Reduce this issue by duplicating the track wherever feasible. Once these works are done, electrify the line. Once these upgrades are complete, expand the Belair train line to Mount Barker.</p>
 
-              <h4>Make environmentally friendly choices more affordable<br>
-               <small>(16.0_Affordable_Options)</small>
-              </h4>
+      <h4 id="16.0_Affordable_Options">Make environmentally friendly choices more affordable<br>
+       <small>(16.0_Affordable_Options)</small>
+      </h4>
 
-              <p>The Quality of Life Commission will be charged with finding other ways to reduce pollution by making environmentally friendly choices more affordable.</p>
+      <p>The Quality of Life Commission will be charged with finding other ways to reduce pollution by making environmentally friendly choices more affordable.</p>
 
-             <h3>Corruption</h3>
+     <h3>Corruption</h3>
 
-              <h4>Make our system more democratic<br>
-               <small>(17.0_Democratise)</small>
-              </h4>
+      <h4 id="17.0_Democratise">Make our system more democratic<br>
+       <small>(17.0_Democratise)</small>
+      </h4>
 
-              <p>Deliver integrity in politics, transparency and accountability in government and a stronger democracy, where politicians serve and represent their communities and pursue the interests of their electorate, not a separate agenda of a political party or corporations. My plan for this will later be published in detail, but the plan starts with supporting the movement for more independent politicians in this country. In the meantime, there are some reforms that ideally should be implemented immediately, even prior to the coming election in March 2026:</p>
-              <ul>
-               <li>17.1 Provide ECSA with adequate funding to provide information to every voter about every candidate in their electorate and their policies. It's not expensive to send a pamphlet to every voter. It ensures a balanced amount of space and advertising for each candidate, and it also allows the following policy:</li>
-               <li>17.2 Tighten the cap on candidate spending. Although large political donations have been banned, wealthy or otherwise well-resourced candidates can still spend up to $100 000 on their campaign during the expenditure period alone, and as much as they like outside the expenditure period, while other candidates may not be able to afford spending even $10 000. This creates an unfair disadvantage for less wealthy candidates, and even some of the wealthier candidates might prefer to spend less than $100 000 on the condition that none of their opponents is spending more than they are. Since the upfront advance funding for new candidates is $5000, the default statewide cap should be lowered to $10 000 per candidate in the pre-election period, with candidates having the right to negotiate a different cap for their electorate between $5000 and $100 000 if the majority of candidates in that electorate agree to it. There should also be a cap introduced for total expenditure in the years outside the pre-election period.</li>
-               <li>17.3 Ban political campaigning at polling booths. It's annoying, and it creates further bias towards candidates with more resources.</li>
-               <li>17.4 End the requirement for political candidates to put an exact address on their political materials. This is unfair on candidates who don't have an office, since they currently would have to put their exact home address on all materials including on the internet. PO Boxes aren't currently allowed as the address, and even this probably shouldn't be a requirement in the days of the internet and email. In situations where it's obvious who authorised the content, eg. it is posted on an official account online, the "Authorised by" message should not be required at all.</li>
-               <!-- <li>17.4 Hold council elections on the same day as state elections in order to increase council voting and thereby increase accountability of local councils. Allow candidates to run for multiple positions (but not multiple wards/electorates), such as mayor and MP, but only accept one of the positions if they win more than one. Due to our preferential voting system, votes can easily be redistributed if a candidate wins more than one position and has to turn one down.</li> -->
-              </ul>
+      <p>Deliver integrity in politics, transparency and accountability in government and a stronger democracy, where politicians serve and represent their communities and pursue the interests of their electorate, not a separate agenda of a political party or corporations. My plan for this will later be published in detail, but the plan starts with supporting the movement for more independent politicians in this country. In the meantime, there are some reforms that ideally should be implemented immediately, even prior to the coming election in March 2026:</p>
+      <ul>
+       <li id="17.1_ECSA_Funding">17.1 Provide ECSA with adequate funding to provide information to every voter about every candidate in their electorate and their policies. It's not expensive to send a pamphlet to every voter. It ensures a balanced amount of space and advertising for each candidate, and it also allows the following policy:</li>
+       <li id="17.2_Spending_Cap">17.2 Tighten the cap on candidate spending. Although large political donations have been banned, wealthy or otherwise well-resourced candidates can still spend up to $100 000 on their campaign during the expenditure period alone, and as much as they like outside the expenditure period, while other candidates may not be able to afford spending even $10 000. This creates an unfair disadvantage for less wealthy candidates, and even some of the wealthier candidates might prefer to spend less than $100 000 on the condition that none of their opponents is spending more than they are. Since the upfront advance funding for new candidates is $5000, the default statewide cap should be lowered to $10 000 per candidate in the pre-election period, with candidates having the right to negotiate a different cap for their electorate between $5000 and $100 000 if the majority of candidates in that electorate agree to it. There should also be a cap introduced for total expenditure in the years outside the pre-election period.</li>
+       <li id="17.3_Campaigning_Ban">17.3 Ban political campaigning at polling booths. It's annoying, and it creates further bias towards candidates with more resources.</li>
+       <li id="17.4_Address_End">17.4 End the requirement for political candidates to put an exact address on their political materials. This is unfair on candidates who don't have an office, since they currently would have to put their exact home address on all materials including on the internet. PO Boxes aren't currently allowed as the address, and even this probably shouldn't be a requirement in the days of the internet and email. In situations where it's obvious who authorised the content, eg. it is posted on an official account online, the "Authorised by" message should not be required at all.</li>
+       <!-- <li>17.4 Hold council elections on the same day as state elections in order to increase council voting and thereby increase accountability of local councils. Allow candidates to run for multiple positions (but not multiple wards/electorates), such as mayor and MP, but only accept one of the positions if they win more than one. Due to our preferential voting system, votes can easily be redistributed if a candidate wins more than one position and has to turn one down.</li> -->
+      </ul>
 
-              <p>The job of a politician in our lower house is to serve and represent their electorate. The most important aspect of this is to pursue and prioritise policies that align with the agenda of the electorate, and not to pursue any other agenda. None of our major political parties recognise this as the foundational principle of their constitution, and for at least the last 80 years or so, it seems that political parties have prevented the accountability of politicians to their electorate more than they have held politicians accountable. Getting more independents into parliament is the first step towards solving this problem, especially independents who are committed to their democratic duties to their electorate.</p>
+      <p>The job of a politician in our lower house is to serve and represent their electorate. The most important aspect of this is to pursue and prioritise policies that align with the agenda of the electorate, and not to pursue any other agenda. None of our major political parties recognise this as the foundational principle of their constitution, and for at least the last 80 years or so, it seems that political parties have prevented the accountability of politicians to their electorate more than they have held politicians accountable. Getting more independents into parliament is the first step towards solving this problem, especially independents who are committed to their democratic duties to their electorate.</p>
 
-              <h4>Keep South Australian land in South Australian hands<br>
-               <small>(18.0_Reclaim_Land)</small>
-              </h4>
-              
-              <p>The largest ranch in the world, Anna Creek Station in South Australia, belongs to Gina Rinehart and a Chinese corporation. South Australian land and property should, by law, belong entirely to South Australian permanent residents, past permanent residents and soon-to-be permanent residents, except where it belongs to the federal government.</p>
+      <h4 id="18.0_Reclaim_Land">Keep South Australian land in South Australian hands<br>
+       <small>(18.0_Reclaim_Land)</small>
+      </h4>
+      
+      <p>The largest ranch in the world, Anna Creek Station in South Australia, belongs to Gina Rinehart and a Chinese corporation. South Australian land and property should, by law, belong entirely to South Australian permanent residents, past permanent residents and soon-to-be permanent residents, except where it belongs to the federal government.</p>
 
-              <h3>Public wellbeing and preventing violence</h3>
+      <h3>Public wellbeing and preventing violence</h3>
 
-              <h4>Prevent harm to public wellbeing<br>
-               <small>(19.0_Environmental_Health)</small>
-              </h4>
+      <h4 id="19.0_Environmental_Health">Prevent harm to public wellbeing<br>
+       <small>(19.0_Environmental_Health)</small>
+      </h4>
 
-              <p>I will generally support any measure to prevent harm to public wellbeing, including the following:</p>
+      <p>I will generally support any measure to prevent harm to public wellbeing, including the following:</p>
 
-              <h4>Ensure adequate emergency housing for the homeless<br>
-               <small>(19.1_Right_To_Housing)</small>
-              </h4>
+      <h4 id="19.1_Right_To_Housing">Ensure adequate emergency housing for the homeless<br>
+       <small>(19.1_Right_To_Housing)</small>
+      </h4>
 
-              <p>Ensure safe emergency housing for the homeless, including facilities for women and children, and separate facilities that provide emergency housing to all other adults including men.</p>
+      <p>Ensure safe emergency housing for the homeless, including facilities for women and children, and separate facilities that provide emergency housing to all other adults including men.</p>
 
-              <h4>Address the environmental causes of mental illness and violence<br>
-               <small>(19.2_Environmental_Health)</small>
-              </h4>
+      <h4 id="19.2_Environmental_Health">Address the environmental causes of mental illness and violence<br>
+       <small>(19.2_Environmental_Health)</small>
+      </h4>
 
-              <p>Fund science, science integrity and science communication when it comes to the environmental causes of mental illness and violence, and develop science-based policy to address the causes of mental illness and violence. The science on the causes of mental illness and violence is inadequate, and the good science that has been done has not been adequately communicated to the public, who are exposed to simplistic and incorrect narratives about the causes of mental illness and violence, some of which increase conflict and hatred and lead to more violence.</p>
+      <p>Fund science, science integrity and science communication when it comes to the environmental causes of mental illness and violence, and develop science-based policy to address the causes of mental illness and violence. The science on the causes of mental illness and violence is inadequate, and the good science that has been done has not been adequately communicated to the public, who are exposed to simplistic and incorrect narratives about the causes of mental illness and violence, some of which increase conflict and hatred and lead to more violence.</p>
 
-              <h4>Prevent harm from advertising and provide better info<br>
-               <small>(19.3_Regulate_Advertising)</small>
-              </h4>
+      <h4 id="19.3_Regulate_Advertising">Prevent harm from advertising and provide better info<br>
+       <small>(19.3_Regulate_Advertising)</small>
+      </h4>
 
-              <p>Give both SA Health and the EPA the power to regulate against harmful advertising, such as gambling ads or alcohol ads, especially when children may be present, and to regulate product packaging to better inform consumers about products.</p>
+      <p>Give both SA Health and the EPA the power to regulate against harmful advertising, such as gambling ads or alcohol ads, especially when children may be present, and to regulate product packaging to better inform consumers about products.</p>
 
-              <h4>Free sport and healthy activity classes<br>
-               <small>(19.4_Free_Sport)</small>
-              </h4>
+      <h4 id="19.4_Free_Sport">Free sport and healthy activity classes<br>
+       <small>(19.4_Free_Sport)</small>
+      </h4>
 
-              <p>Provide sporting clubs and similar clubs and health education services with the funding to provide South Australians with at least one free group lesson per year.</p>
+      <p>Provide sporting clubs and similar clubs and health education services with the funding to provide South Australians with at least one free group lesson per year.</p>
 
-              <h4>More diet soft drink than regular soft drink<br>
-               <small>(19.5_Healthier_Drinks)</small>
-              </h4>
+      <h4 id="19.5_Healthier_Drinks">More diet soft drink than regular soft drink<br>
+       <small>(19.5_Healthier_Drinks)</small>
+      </h4>
 
-              <p>Require all venues and vending machines selling soft drink to sell more diet soft drink options than regular soft drink options.</p>
+      <p>Require all venues and vending machines selling soft drink to sell more diet soft drink options than regular soft drink options.</p>
 
-              <h4>Support any measure against cruelty and violence towards animals<br>
-               <small>(20.0_Non-violence)</small>
-              </h4>
+      <h4 id="20.0_Non-violence">Support any measure against cruelty and violence towards animals<br>
+       <small>(20.0_Non-violence)</small>
+      </h4>
 
-              <p>I will always support measures to prevent cruelty and violence, and will look for areas where I can get support from other members of parliament. This includes cruelty and violence towards all animals.</p>
+      <p>I will always support measures to prevent cruelty and violence, and will look for areas where I can get support from other members of parliament. This includes cruelty and violence towards all animals.</p>
 
-             </section>
+     </section> <!-- /policy -->
 
              <section id="essays" class="content-section responsive-width">
               <h2>Essays</h2>
