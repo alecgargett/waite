@@ -610,23 +610,21 @@
 function applySavedTheme() {
     const savedTheme = localStorage.getItem('theme');
     
-    if (savedTheme === 'dark-theme' || savedTheme === 'white-theme' || savedTheme === 'yellow-theme') {
-        document.body.className = savedTheme;
-    } else {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.body.className = prefersDark ? 'dark-theme' : 'yellow-theme';
-    }
+    if (savedTheme === 'dark-theme' || savedTheme === 'white-theme' || savedTheme === 'yellow-theme')
+{       document.body.className = savedTheme; }
+    else
+{       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.body.className = prefersDark ? 'dark-theme' : 'yellow-theme'; }
 }
 
 function toggleTheme() {
     let newTheme;
-    if (document.body.className === 'yellow-theme') {
-        newTheme = 'white-theme';
-    } else if (document.body.className === 'white-theme') {
-        newTheme = 'dark-theme';
-    } else {
-        newTheme = 'yellow-theme';
-    }
+    if (document.body.className === 'yellow-theme')
+{       newTheme = 'white-theme'; }
+    else if (document.body.className === 'white-theme')
+{       newTheme = 'dark-theme'; } 
+    else
+{       newTheme = 'yellow-theme'; }
     document.body.className = newTheme;
     localStorage.setItem('theme', newTheme);
 }
@@ -636,17 +634,16 @@ function toggleTheme() {
 function setIntroSmile(smileOn) {
   const introBox = document.querySelector('.intro-content-box');
   if (!introBox) return;
-  if (smileOn) {
-    introBox.classList.add('smile');
-  } else {
-    introBox.classList.remove('smile');
-  }
+  if (smileOn)
+{   introBox.classList.add('smile'); } 
+    else
+{   introBox.classList.remove('smile'); }
 }
 </script>
 
 <style>
-:root {
-    --font-family-heading: 'Merriweather', serif;
+:root
+{   --font-family-heading: 'Merriweather', serif;
     --font-family-body: 'Lato', sans-serif;
 
     --color-yellow-dark: rgb(255, 179, 0);
@@ -672,63 +669,55 @@ function setIntroSmile(smileOn) {
     --color-surface: var(--color-surface-light);
     --color-text: var(--color-text-light);
     --color-text-muted: var(--color-text-muted-light);
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); }
 
-html {
-    scroll-padding-top: 150px; 
-    scroll-behavior: smooth;
-}
+html
+{   scroll-padding-top: 150px; 
+    scroll-behavior: smooth; }
 
 
-body.dark-theme {
-    --color-primary: var(--color-primary-dark);
+body.dark-theme
+{   --color-primary: var(--color-primary-dark);
     --color-secondary: var(--color-secondary-dark);
     --color-surface: var(--color-surface-dark);
     --color-text: var(--color-text-dark);
     --color-text-muted: var(--color-text-muted-dark);
     
-    background: linear-gradient(to right, var(--color-gradient-blue-dark), rgb(0, 0, 0), var(--color-gradient-blue-dark));
-}
+    background: linear-gradient(to right, var(--color-gradient-blue-dark), rgb(0, 0, 0), var(--color-gradient-blue-dark)); }
 
-body.yellow-theme {
-    --color-primary: var(--color-primary-light);
+body.yellow-theme
+{   --color-primary: var(--color-primary-light);
     --color-secondary: var(--color-secondary-light);
     --color-text: var(--color-text-light);
     --color-text-muted: var(--color-text-muted-light);
 
-    background: linear-gradient(to right, var(--color-yellow-dark), var(--color-yellow-light), var(--color-yellow-dark));
-}
+    background: linear-gradient(to right, var(--color-yellow-dark), var(--color-yellow-light), var(--color-yellow-dark)); }
 
-html {
-    scroll-behavior: smooth;
-}
+html
+{   scroll-behavior: smooth; }
 
-body {
-    background-color: var(--color-background);
+body
+{   background-color: var(--color-background);
     color: var(--color-text);
     font-family: var(--font-family-body);
     margin: 0;
     line-height: 1.7;
     font-size: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+    transition: background-color 0.3s ease, color 0.3s ease; }
 
-.responsive-width {
-    max-width: 800px;
+.responsive-width
+{   max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px;
-}
+    padding: 0 20px; }
 
-h1, h2, h3 {
-    font-family: var(--font-family-heading);
+h1, h2, h3
+{   font-family: var(--font-family-heading);
     color: var(--color-primary);
-    line-height: 1.3;
-}
+    line-height: 1.3; }
 
 h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-h2 { font-size: 2.25rem; margin-top: 2.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--color-secondary); padding-bottom: 0.5rem;}
+h2 { font-size: 2.25rem; margin-top: 2.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--color-secondary); padding-bottom: 0.5rem; }
 h3 { font-size: 1.5rem; margin-top: 2rem; }
 h4 { font-size: 1.2rem; }
 
@@ -736,271 +725,219 @@ h3 small,
 h4 small {
   display: block;
   font-size: 0.8em;
-  line-height: 1;
-}
+  line-height: 1; }
 
 p { margin-bottom: 1rem; }
 
-a {
-    color: var(--color-secondary);
+a
+{   color: var(--color-secondary);
     text-decoration: none;
-    transition: color 0.2s ease;
-}
-a:hover {
-    text-decoration: underline;
-    color: var(--color-primary);
-}
+    transition: color 0.2s ease; }
+a:hover
+{   text-decoration: underline;
+    color: var(--color-primary); }
 
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-li {
-    margin-bottom: 0.5rem;
-}
+ul
+{   list-style-type: disc;
+    padding-left: 20px; }
+li
+{   margin-bottom: 0.5rem; }
 
-.site-header {
-    background-color: rgba(255, 255, 255, 0.50);
+.site-header
+{   background-color: rgba(255, 255, 255, 0.50);
     box-shadow: var(--box-shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
     transition: background-color 0.3s ease;
-    backdrop-filter: blur(5px);
-}
-body.dark-theme .site-header {
-    background-color: rgba(10, 15, 30, 0.50);
-}
-body.yellow-theme .site-header {
-    background-color: rgba(255, 253, 231, 0.50);
-}
+    backdrop-filter: blur(5px); }
+body.dark-theme .site-header
+{   background-color: rgba(10, 15, 30, 0.50); }
+body.yellow-theme .site-header
+{   background-color: rgba(255, 253, 231, 0.50); }
 
-.header-content {
-    display: flex;
+.header-content
+{   display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-}
-.logo-group {
-    line-height: 1;
-}
-.logo {
-    font-family: var(--font-family-heading);
+    height: 70px; }
+.logo-group
+{   line-height: 1; }
+.logo
+{   font-family: var(--font-family-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-primary);
-}
-.logo:hover {
-    text-decoration: none;
-}
-.logo-subtitle {
-    font-size: 0.9rem;
+    color: var(--color-primary); }
+.logo:hover
+{   text-decoration: none; }
+.logo-subtitle
+{   font-size: 0.9rem;
     font-weight: 400;
     color: var(--color-text-muted);
-    display: block;
-}
-.main-nav a {
-    color: var(--color-text);
+    display: block; }
+.main-nav a
+{   color: var(--color-text);
     margin: 0 15px;
-    font-weight: 700;
-}
-#theme-toggle-button {
-    background-color: transparent;
+    font-weight: 700; }
+#theme-toggle-button
+{   background-color: transparent;
     border: 1px solid var(--color-secondary);
     color: var(--color-secondary);
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-}
-#theme-toggle-button:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-surface);
-}
+    transition: background-color 0.2s, color 0.2s; }
+#theme-toggle-button:hover
+{   background-color: var(--color-secondary);
+    color: var(--color-surface); }
 
-.page-intro {
-    padding: 4rem 0;
-    text-align: center;
-}
+.page-intro
+{   padding: 4rem 0;
+    text-align: center; }
 
-.intro-content-box {
-    background-color: var(--color-background);
+.intro-content-box
+{   background-color: var(--color-background);
     background-image: url('images/alec_gargett_adelaide_oval_torrens_river_202303_cropped.jpg');
     background-size: cover;
     background-position: right 25%;
     padding: 60px 20px;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
-    transition: background-image 0.5s ease-in-out;
-}
-.intro-content-box.smile {
-    background-image: url('images/alec_gargett_adelaide_oval_torrens_river_202303_smile_cropped.jpg');
-}
-.intro-content-box h1 {
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-.intro-content-box .subtitle {
-    font-size: 1.75rem;
+    transition: background-image 0.5s ease-in-out; }
+.intro-content-box.smile
+{   background-image: url('images/alec_gargett_adelaide_oval_torrens_river_202303_smile_cropped.jpg'); }
+.intro-content-box h1
+{   color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); }
+.intro-content-box .subtitle
+{   font-size: 1.75rem;
     font-family: var(--font-family-body);
     font-weight: 300;
     color: rgb(255, 255, 255);
     margin: 0;
     border-bottom: none;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-.social-links {
-    display: flex;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); }
+.social-links
+{   display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin: 1.5rem 0 2rem;
-}
-.intro-content-box .social-links a {
-    color: rgb(255, 255, 255);
+    margin: 1.5rem 0 2rem; }
+.intro-content-box .social-links a
+{   color: rgb(255, 255, 255);
     transition: color 0.2s ease, transform 0.2s ease;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-.social-links a:hover {
-    color: var(--color-secondary-dark);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
+.social-links a:hover
+{   color: var(--color-secondary-dark);
     transform: translateY(-2px);
-    text-decoration: none;
-}
-.social-links svg {
-    width: 32px;
+    text-decoration: none; }
+.social-links svg
+{   width: 32px;
     height: 32px;
-    fill: currentColor;
-}
-.cta-buttons {
-    display: flex;
+    fill: currentColor; }
+.cta-buttons
+{   display: flex;
     gap: 1rem;
-    justify-content: center;
-}
-.btn {
-    display: inline-block;
+    justify-content: center; }
+.btn
+{   display: inline-block;
     padding: 12px 24px;
     border-radius: 5px;
     font-weight: 700;
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-}
-.btn:hover {
-    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; }
+.btn:hover
+{   text-decoration: none;
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-.btn-primary {
-    background-color: rgb(13, 71, 161);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+.btn-primary
+{   background-color: rgb(13, 71, 161);
     color: rgb(255, 255, 255);
-    border: 2px solid rgb(13, 71, 161);
-}
-.btn-primary:hover {
-    background-color: rgb(21, 101, 192);
-    border-color: rgb(21, 101, 192);
-}
-.intro-content-box .btn-secondary {
-    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgb(13, 71, 161); }
+.btn-primary:hover
+{   background-color: rgb(21, 101, 192);
+    border-color: rgb(21, 101, 192); }
+.intro-content-box .btn-secondary
+{   background-color: rgba(0, 0, 0, 0.2);
     color: rgb(255, 255, 255);
-    border: 2px solid rgb(255, 255, 255);
-}
-.intro-content-box .btn-secondary:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
+    border: 2px solid rgb(255, 255, 255); }
+.intro-content-box .btn-secondary:hover
+{   background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0); }
 
-.content-section {
-    padding: 40px 20px;
+.content-section
+{   padding: 40px 20px;
     background-color: var(--color-surface);
     margin: 2rem auto;
     border-radius: 8px;
-    box-shadow: var(--box-shadow);
-}
+    box-shadow: var(--box-shadow); }
 body.dark-theme .content-section p,
-body.dark-theme .content-section li {
-    background-color: rgb(0, 0, 0);
+body.dark-theme .content-section li
+{   background-color: rgb(0, 0, 0);
     padding: 1rem;
-    border-radius: 5px;
-}
-body.dark-theme .content-section {
-    background-color: rgba(0, 0, 0, 0);
-}
-body.yellow-theme .content-section {
-    background-color: var(--color-yellow-light);
-}
+    border-radius: 5px; }
+body.dark-theme .content-section
+{   background-color: rgba(0, 0, 0, 0); }
+body.yellow-theme .content-section
+{   background-color: var(--color-yellow-light); }
 
-.contact-email {
-    font-size: 1.2rem;
+.contact-email
+{   font-size: 1.2rem;
     text-align: center;
-    margin-top: 2rem;
-}
-.disclaimer {
-    font-style: italic;
+    margin-top: 2rem; }
+.disclaimer
+{   font-style: italic;
     color: var(--color-text-muted);
-    font-size: 0.9rem;
-}
-body.dark-theme .disclaimer {
-    background-color: transparent;
-    padding: 0;
-}
+    font-size: 0.9rem; }
+body.dark-theme .disclaimer
+{   background-color: transparent;
+    padding: 0; }
 
-.site-footer {
-    background-color: black;
+.site-footer
+{   background-color: black;
     color: white;
     padding: 20px 0;
     text-align: center;
-    font-size: 0.9rem;
-}
+    font-size: 0.9rem; }
 
-.site-footer a {
-    color: rgb(155, 255, 255);
-    text-decoration: underline;
-}
+.site-footer a
+{   color: rgb(155, 255, 255);
+    text-decoration: underline; }
 
-.site-footer a:hover {
-    color: rgb(0, 200, 255);
-}
+.site-footer a:hover
+{   color: rgb(0, 200, 255); }
 
-body.yellow-theme .site-footer a {
-    color: rgb(255, 255, 155);
-}
+body.yellow-theme .site-footer a
+{   color: rgb(255, 255, 155); }
 
-body.yellow-theme .site-footer a:hover {
-    color: rgb(233, 233, 000);
-}
+body.yellow-theme .site-footer a:hover
+{   color: rgb(233, 233, 000); }
 
-.site-footer p {
-    margin: 0.5rem 0;
-}
+.site-footer p
+{   margin: 0.5rem 0; }
 
-@media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
+@media (max-width: 768px)
+{   h1 { font-size: 2.5rem; }
     h2 { font-size: 1.75rem; }
-    .header-content {
-        flex-direction: column;
+    .header-content
+{       flex-direction: column;
         height: auto;
-        padding: 15px 0;
-    }
-    .main-nav {
-        margin: 15px 0;
-    }
-    .main-nav a {
-        margin: 0 10px;
-    }
-    .cta-buttons {
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    .intro-content-box {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0,0.4)),
+        padding: 15px 0; }
+    .main-nav
+{       margin: 15px 0; }
+    .main-nav a
+{       margin: 0 10px; }
+    .cta-buttons
+{       flex-wrap: wrap;
+        flex-direction: row; }
+    .intro-content-box
+{       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0,0.4)),
                           url('images/alec_gargett_adelaide_oval_torrens_river_202303_cropped.jpg');
         background-size: cover;
-        background-position: right 25%;
-    }
-    .intro-content-box.smile {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                          url('images/alec_gargett_adelaide_oval_torrens_river_202303_smile_cropped.jpg');
-    }
-}
+        background-position: right 25%; }
+    .intro-content-box.smile
+{       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                          url('images/alec_gargett_adelaide_oval_torrens_river_202303_smile_cropped.jpg'); } }
 </style>
      
 <script defer src="https://cdn.counter.dev/script.js" data-id="9cb95797-dd6c-4b86-ab11-90a4e37567d3" data-utcoffset="11"></script>
