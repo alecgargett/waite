@@ -494,26 +494,27 @@
 </body>
 
 <tail style="display:none">
+
 <script id="theme-switcher">
 function applySavedTheme() {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
+    
+    if (savedTheme === 'dark-theme' || savedTheme === 'white-theme' || savedTheme === 'yellow-theme') {
         document.body.className = savedTheme;
     } else {
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.body.className = prefersDark ? 'dark-theme' : 'light-theme';
+        document.body.className = prefersDark ? 'dark-theme' : 'yellow-theme';
     }
 }
 
 function toggleTheme() {
-    const currentTheme = document.body.className;
     let newTheme;
-    if (currentTheme === 'dark-theme') {
-        newTheme = 'light-theme';
-    } else if (currentTheme === 'light-theme') {
+    if (document.body.className === 'yellow-theme') {
         newTheme = 'white-theme';
-    } else {
+    } else if (document.body.className === 'white-theme') {
         newTheme = 'dark-theme';
+    } else {
+        newTheme = 'yellow-theme';
     }
     document.body.className = newTheme;
     localStorage.setItem('theme', newTheme);
@@ -573,7 +574,7 @@ body.dark-theme {
     background: linear-gradient(to right, var(--color-gradient-blue-dark), rgb(0, 0, 0), var(--color-gradient-blue-dark));
 }
 
-body.light-theme {
+body.yellow-theme {
     --color-primary: var(--color-primary-light);
     --color-secondary: var(--color-secondary-light);
     --color-text: var(--color-text-light);
@@ -648,7 +649,7 @@ li {
 body.dark-theme .site-header {
     background-color: rgba(10, 15, 30, 0.50);
 }
-body.light-theme .site-header {
+body.y-theme .site-header {
     background-color: rgba(255, 253, 231, 0.50);
 }
 
@@ -800,7 +801,7 @@ body.dark-theme .content-section li {
 body.dark-theme .content-section {
     background-color: rgba(0, 0, 0, 0);
 }
-body.light-theme .content-section {
+body.yellow-theme .content-section {
     background-color: var(--color-yellow-light);
 }
 
@@ -819,27 +820,31 @@ body.dark-theme .disclaimer {
     padding: 0;
 }
 
-
 .site-footer {
-    background-color: var(--color-text);
-    color: var(--color-background);
+    background-color: black;
+    color: white;
     padding: 20px 0;
     text-align: center;
     font-size: 0.9rem;
 }
-body.dark-theme .site-footer,
-body.light-theme .site-footer {
-    background-color: rgb(0, 0, 0);
-    color: var(--color-text-muted-dark);
-}
+
 .site-footer a {
-    color: var(--color-background);
+    color: rgb(155, 255, 255);
     text-decoration: underline;
 }
-body.dark-theme .site-footer a,
-body.light-theme .site-footer a {
-    color: var(--color-text-dark);
+
+.site-footer a:hover {
+    color: rgb(0, 200, 255);
 }
+
+body.yellow-theme .site-footer a {
+    color: rgb(255, 255, 155);
+}
+
+body.yellow-theme .site-footer a:hover {
+    color: rgb(233, 233, 000);
+}
+
 .site-footer p {
     margin: 0.5rem 0;
 }
