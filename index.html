@@ -661,7 +661,7 @@ function setIntroSmile(smileOn) {
     --colour-primary-dark: white;
     --colour-secondary-dark: rgb(000, 222, 255);
     --colour-background-dark: black;
-    --colour-transparent-dark: rgba(0, 0, 0, 0.8);
+    --colour-transparent-dark: rgb(0, 0, 0);
     --colour-gradient-blue-dark: rgb(0, 10, 80);
     --colour-surface-dark: rgba(20, 25, 40, 0.75);
     --colour-text-dark: rgb(224, 224, 224);
@@ -942,13 +942,13 @@ body.dark-theme .content-section
 }
 
 .sub-toc-list a {
-    color: var(--colour-secondary-dark);
+    color: var(--colour-primary);
     text-decoration: underline;
     transition: color 0.2s ease;
 }
 
 .sub-toc-list a:hover {
-    color: var(--colour-primary-dark);
+    color: var(--colour-secondary);
     text-decoration: underline;
 }
 
@@ -965,6 +965,10 @@ body.dark-theme .toc-list > li > a {
     color: white;
 }
 body.dark-theme .toc-list > li > a:hover {
+    color: var(--colour-secondary-dark);
+}
+
+body.dark-theme .sub-toc-list > li > a:hover {
     color: var(--colour-secondary-dark);
 }
 
