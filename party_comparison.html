@@ -40,6 +40,25 @@
             position: relative;
         }
 
+        /* HEADLINE STYLES */
+        .main-title {
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.4rem, 6vw, 1.8rem);
+            font-weight: 800;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+            margin-bottom: 4px; 
+        }
+
+        .main-title .vs {
+            color: #4da6ff; 
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
         .card {
             border-radius: 12px;
             padding: 16px 24px; 
@@ -52,16 +71,8 @@
         }
 
         .card.negative {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 1);
             flex-shrink: 0; 
-        }
-
-        .card.positive {
-            background: #ffffff;
-            padding: 20px 24px; 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            flex: 1; 
-            min-height: 0; 
         }
 
         .logo-row {
@@ -73,12 +84,6 @@
             min-height: 45px;
         }
 
-        .card.positive .logo-row {
-            margin-bottom: 20px;
-            flex: 1; 
-            min-height: 0; 
-        }
-
         .logo-row img {
             object-fit: contain;
         }
@@ -88,60 +93,6 @@
         .logo-onenation { height: 35px; width: auto; }
         .logo-libs { height: 40px; width: auto; }
         
-        .custom-logo {
-            width: 100%;
-            height: 100%;
-            background-image: url('images/alec_gargett_adelaide_oval_torrens_river_202303_cropped.jpg');
-            background-size: cover;
-            background-position: center right; 
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            padding-left: 20px; 
-            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-        }
-
-        .custom-logo::before {
-            content: '';
-            position: absolute;
-            top: 0; bottom: 0; left: 0;
-            width: 80%; 
-            background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%, transparent 100%);
-            z-index: 1;
-        }
-
-        .custom-logo-content {
-            position: relative;
-            z-index: 2;
-            width: 90%; 
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .custom-logo-name {
-            color: #ffffff;
-            font-family: "Montserrat";
-            font-size: clamp(2rem, 8vw, 3rem); 
-            font-weight: 800;
-            line-height: 1;
-            letter-spacing: -0.5px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .custom-logo-title {
-            color: #2890ff;
-            font-family: "Montserrat";
-            font-size: clamp(1rem, 4vw, 1.5rem);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-        }
-
         .logo-separator {
             font-weight: 800;
             color: #999;
@@ -157,21 +108,11 @@
 
         .text {
             font-size: 1.25rem;
-            color: #222;
+            color: black;
             line-height: 1.3;
             flex: 1;
         }
 
-        .card.negative .text {
-            color: #444;
-        }
-
-        .card.positive .text strong {
-            color: #241b5e;
-            font-weight: 800;
-        }
-
-        /* Adjusted Icon styling for logo row */
         .icon {
             width: 55px;
             height: 55px;
@@ -182,14 +123,99 @@
             margin-left: 5px;
         }
 
-        /* Specific size for the green check in the bottom row */
-        .card.positive .icon {
-            width: 100px;
-            height: 100px;
-            margin-left: 20px;
+        .icon svg {
+            width: 100%;
+            height: 100%;
         }
 
-        .icon svg {
+        /* --- POSITIVE CARD STYLES --- */
+        .card.positive {
+            background-image: url('images/alec_gargett_adelaide_oval_torrens_river_202303_cropped.jpg');
+            background-size: cover;
+            background-position: right 15%; 
+            padding: 24px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            flex: 1; 
+            min-height: 0; 
+            border: none;
+            overflow: hidden;
+            justify-content: space-between;
+        }
+
+        .card.positive > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .positive-header {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .positive-name {
+            color: #002e6e;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(2rem, 7vw, 2.6rem); 
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .positive-title {
+            color: #0056b3;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(1rem, 3.5vw, 1.3rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .positive-content-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .positive-text {
+            color: #002e6e;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(1.1rem, 4.5vw, 1.44rem);
+            font-weight: 600;
+            line-height: 1.5; /* Increased line height for verticality */
+            background: rgba(255, 255, 255, 0.85);
+            
+            /* Box Sizing Adjustments */
+            padding: 5px 15px; /* Taller vertical padding */
+            max-width: 300px;    /* Narrower width to force text wrapping */
+            
+            border-radius: 8px;
+            text-shadow: none;
+        }
+
+        .positive-text strong {
+            color: #0056b3;
+            font-weight: 800;
+        }
+
+        .positive-icon {
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 10px;
+            border-radius: 50%;
+        }
+        
+        .positive-icon svg {
             width: 100%;
             height: 100%;
         }
@@ -206,18 +232,22 @@
         }
 
         @media (max-width: 480px) {
-            .text { font-size: 1.1rem; }
+            .positive-text { max-width: 180px; padding: 15px 12px; }
+            .main-title { font-size: 1.25rem; margin-bottom: 0; }
             .auth-text { font-size: 0.55rem; bottom: 8px; }
             .ad-container { padding: 16px 16px 32px 16px; gap: 12px; }
-            .card { padding: 12px 16px; }
-            .custom-logo-name { font-size: 1.6rem; }
-            .custom-logo-title { font-size: 0.85rem; }
+            .card.positive { padding: 16px; }
+            .positive-icon { width: 50px; height: 50px; }
         }
     </style>
 </head>
 <body>
 
     <div class="ad-container">
+        
+        <!-- TITLE -->
+        <h1 class="main-title">Marketing machines
+         <br> <span class="vs">vs</span> Alec Gargett</h1>
 
         <!-- ROW 1 -->
         <div class="card negative">
@@ -254,26 +284,23 @@
                 </div>
             </div>
             <div class="content-row">
-                <div class="text">Rising living costs and dangerous dependence on unsustainable coal, gas, and imported petrol</div>
+                <div class="text">Even higher costs and dangerous dependence on unsustainable coal, gas, and imported petrol</div>
             </div>
         </div>
 
         <!-- ROW 3 -->
         <div class="card positive">
-            <div class="logo-row">
-                <div class="custom-logo">
-                    <div class="custom-logo-content">
-                        <div class="custom-logo-name">Alec Gargett</div>
-                        <div class="custom-logo-title">Independent for Waite</div>
-                    </div>
-                </div>
+            <div class="positive-header">
+                <div class="positive-name">Alec Gargett</div>
+                <div class="positive-title">Independent for Waite</div>
             </div>
-            <div class="content-row" style="text-align: left;">
-                <div class="text" style="font-size: 1.6rem;">
+            
+            <div class="positive-content-row">
+                <div class="positive-text">
                     An <strong>independent voice</strong> with a comprehensive plan to end rorts and create a <strong>sustainable affordable economy</strong>
                 </div>
-                <div class="icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#43A047" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <div class="positive-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                 </div>
