@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Alec Gargett A6</title>
+    <style>
+        @page { size: A6; margin: 0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            color: #000;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 105mm;
+            height: 148mm;
+            background: white;
+            padding: 4mm 8mm 2mm 8mm;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Party Sections */
+        .section-plain {
+            text-align: center;
+            margin-bottom: 2mm;
+        }
+
+        .logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 2px;
+        }
+
+        .logo-row img { height: 42px; width: auto; max-width: 80px; object-fit: contain; }
+        
+        /* Bigger Red X */
+        .icon-x { stroke: #d32f2f; width: 45px; height: 45px; flex-shrink: 0; }
+
+        /* The Card */        .card {
+            border: 2px solid #0044cc;
+            border-radius: 8px;
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%), 
+                        url('images/alec_gargett_adelaide_oval_torrens_river_202303.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Right Aligned Dark Blue Header */
+        .card-header { text-align: right; font-family: Montserrat; }
+        .card h2 { font-size: 2rem; margin: 0; color: #001a4d}
+        .subtitle { color: #003399; font-weight: bold; font-size: 1.4rem; }
+        
+        /* Bottom Text: All White */
+        .card-bottom {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-bottom p { 
+            font-size: 1.1rem; 
+            line-height: 1.3; 
+            color: #ffffff; 
+            margin-right: 50px; 
+        }
+        
+        .card strong { color: #ffffff; font-weight: 800; }
+
+        /* Green Checkmark */
+        .icon-check { stroke: #2e7d32; width: 45px; height: 45px; flex-shrink: 0; }
+
+        .auth {
+            text-align: center;
+            font-size: 5.5pt;
+            line-height: 1.2;
+            padding-top: 2mm;
+        }
+
+        @media print { body { background: none; } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Section 1 -->
+        <div class="section-plain">
+            <div class="logo-row">
+                <img src="images/ALP_logo_2017_960x340.svg.png" alt="Labor">
+                <span>&amp;</span>
+                <img src="images/AustralianGreensLogo_official_1920x1665.svg.png" alt="Greens">
+                <svg class="icon-x" viewBox="0 0 24 24" fill="none" stroke-width="4"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </div>
+            <p>Destructive, unsustainable, expensive growth</p>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section-plain">
+            <div class="logo-row">
+                <img src="images/ALP_logo_2017_960x340.svg.png" alt="Labor">
+                <span>,</span>
+                <img src="images/Pauline_Hanson's_One_Nation_logo_3840x2215.svg.png" alt="One Nation">
+                <span>&amp;</span>
+                <img src="images/Liberal_Party_of_Australia_logo_1920x1565.svg.png" alt="Liberals">
+                <svg class="icon-x" viewBox="0 0 24 24" fill="none" stroke-width="4"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </div>
+            <p>Polluting, unsustainable, expensive dependence on coal, gas and
+             <br>foreign petrol corporations</p>
+        </div>
+
+        <!-- Section 3 - The Card -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Alec Gargett</h2>
+                <p class="subtitle">Independent for Waite</p>
+            </div>
+
+            <div class="card-bottom">
+                <p>
+                    An <strong>independent voice</strong> with a plan to end rorts and create a <strong>sustainable, affordable economy</strong>
+                </p>
+                <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke-width="4"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+        </div>
+
+        <div class="auth">
+            Authorised by Alec Gargett, PO Box 55, Mitcham Shopping Centre SA 5043. <br>
+            Printed by Marion Officeworks, 939 Marion Road, Mitchell Park SA 5043.
+        </div>
+    </div>
+
+</body>
+</html>
