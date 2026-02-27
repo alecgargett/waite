@@ -28,14 +28,15 @@
 
         .ad-container {
             width: 100%;
-            max-width: 600px;
-            aspect-ratio: 105 / 148;
+            /* 1080px is the perfect standard width for Instagram Feed Ads */
+            max-width: 1080px;
+            aspect-ratio: 1 / 1; 
             background: linear-gradient(to bottom, #000000 0%, #0044cc 100%);
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
-            padding: 24px 24px 40px 24px;
-            gap: 16px;
+            padding: clamp(20px, 3vw, 40px) clamp(20px, 3vw, 40px) clamp(32px, 4.5vw, 60px); 
+            gap: clamp(12px, 2vw, 24px); 
             overflow: hidden;
             position: relative;
         }
@@ -44,13 +45,13 @@
         .main-title {
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1.4rem, 6vw, 1.8rem);
+            font-size: clamp(1.5rem, 5vw, 3rem); 
             font-weight: 800;
             text-align: center;
             text-transform: uppercase;
-            line-height: 1.2;
+            line-height: 1.15;
             text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-            margin-bottom: 4px; 
+            margin-bottom: 0; 
         }
 
         .main-title .vs {
@@ -59,9 +60,17 @@
             font-size: 0.9em;
         }
 
+        /* SIDE-BY-SIDE WRAPPER */
+        .negative-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: clamp(12px, 2vw, 24px);
+            width: 100%;
+        }
+
         .card {
             border-radius: 12px;
-            padding: 16px 24px; 
+            padding: clamp(12px, 2vw, 24px); 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -72,31 +81,34 @@
 
         .card.negative {
             background: rgba(255, 255, 255, 1);
-            flex-shrink: 0; 
+            flex: 1; /* Allow cards to share the row width equally */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
         }
 
         .logo-row {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 12px; 
-            min-height: 45px;
+            flex-wrap: wrap; /* Helps multi-logo cards sit nicely */
+            gap: clamp(6px, 1.5vw, 16px);
+            margin-bottom: clamp(8px, 1.5vw, 16px); 
+            min-height: 30px;
         }
 
         .logo-row img {
             object-fit: contain;
         }
 
-        .logo-alp { height: 35px; width: auto; }
-        .logo-greens { height: 40px; width: auto; }
-        .logo-onenation { height: 35px; width: auto; }
-        .logo-libs { height: 40px; width: auto; }
+        /* Scaled up logos for the wider 1080px format */
+        .logo-alp { height: clamp(26px, 3.5vw, 40px); width: auto; }
+        .logo-greens { height: clamp(30px, 4vw, 46px); width: auto; }
+        .logo-onenation { height: clamp(26px, 3.5vw, 40px); width: auto; }
+        .logo-libs { height: clamp(30px, 4vw, 46px); width: auto; }
         
         .logo-separator {
             font-weight: 800;
             color: #999;
-            font-size: 1.2rem;
+            font-size: clamp(1.1rem, 2vw, 1.6rem);
         }
 
         .content-row {
@@ -104,18 +116,19 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            height: 100%;
         }
 
         .text {
-            font-size: 1.25rem;
+            font-size: clamp(0.95rem, 2.2vw, 1.3rem); 
             color: black;
-            line-height: 1.3;
+            line-height: 1.35;
             flex: 1;
         }
 
         .icon {
-            width: 55px;
-            height: 55px;
+            width: clamp(32px, 4vw, 48px);
+            height: clamp(32px, 4vw, 48px);
             flex-shrink: 0;
             display: flex;
             align-items: center;
@@ -132,9 +145,9 @@
         .card.positive {
             background-image: url('images/alec_gargett_adelaide_oval_torrens_river_202303_cropped.jpg');
             background-size: cover;
-            background-position: right 15%; 
-            padding: 24px; 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            background-position: right 20%; 
+            padding: clamp(16px, 3vw, 32px); 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
             flex: 1; 
             min-height: 0; 
             border: none;
@@ -150,54 +163,54 @@
         .positive-header {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
             align-items: flex-start;
         }
 
         .positive-name {
             color: #002e6e;
             font-family: "Montserrat", sans-serif;
-            font-size: clamp(2rem, 7vw, 2.6rem); 
+            font-size: clamp(1.8rem, 5.5vw, 3.2rem); 
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -0.5px;
             background: rgba(255, 255, 255, 0.85);
-            padding: 4px 12px;
-            border-radius: 4px;
+            padding: 4px 16px;
+            border-radius: 6px;
         }
 
         .positive-title {
             color: #0056b3;
             font-family: "Montserrat", sans-serif;
-            font-size: clamp(1rem, 3.5vw, 1.3rem);
+            font-size: clamp(0.9rem, 2.5vw, 1.4rem); 
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             background: rgba(255, 255, 255, 0.85);
-            padding: 4px 12px;
-            border-radius: 4px;
+            padding: 4px 16px;
+            border-radius: 6px;
         }
 
         .positive-content-row {
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
-            gap: 15px;
+            gap: 16px;
         }
 
         .positive-text {
             color: #002e6e;
             font-family: "Montserrat", sans-serif;
-            font-size: clamp(1.1rem, 4.5vw, 1.44rem);
+            font-size: clamp(1rem, 3vw, 1.7rem); 
             font-weight: 600;
-            line-height: 1.5; /* Increased line height for verticality */
+            line-height: 1.35; 
             background: rgba(255, 255, 255, 0.85);
             
-            /* Box Sizing Adjustments */
-            padding: 5px 15px; /* Taller vertical padding */
-            max-width: 300px;    /* Narrower width to force text wrapping */
+            /* Responsive width to account for the background image focal point */
+            padding: 12px 20px; 
+            max-width: 65%;    
             
-            border-radius: 8px;
+            border-radius: 10px;
             text-shadow: none;
         }
 
@@ -207,11 +220,11 @@
         }
 
         .positive-icon {
-            width: 70px;
-            height: 70px;
+            width: clamp(48px, 6vw, 76px); 
+            height: clamp(48px, 6vw, 76px);
             flex-shrink: 0;
             background: rgba(255, 255, 255, 0.85);
-            padding: 10px;
+            padding: 12px;
             border-radius: 50%;
         }
         
@@ -222,22 +235,19 @@
 
         .auth-text {
             position: absolute;
-            bottom: 12px;
+            bottom: clamp(6px, 1.5vw, 14px);
             left: 0;
             right: 0;
             text-align: center;
-            font-size: 0.65rem;
-            color: white;
+            font-size: clamp(0.6rem, 1.5vw, 0.85rem);
+            color: rgba(255, 255, 255, 0.8);
             padding: 0 24px;
         }
 
-        @media (max-width: 480px) {
-            .positive-text { max-width: 180px; padding: 15px 12px; }
-            .main-title { font-size: 1.25rem; margin-bottom: 0; }
-            .auth-text { font-size: 0.55rem; bottom: 8px; }
-            .ad-container { padding: 16px 16px 32px 16px; gap: 12px; }
-            .card.positive { padding: 16px; }
-            .positive-icon { width: 50px; height: 50px; }
+        /* Mobile fallback so it doesn't break if viewed on a real tiny screen before screenshotting */
+        @media (max-width: 600px) {
+            .negative-wrapper { flex-direction: column; }
+            .positive-text { max-width: 90%; }
         }
     </style>
 </head>
@@ -249,46 +259,48 @@
         <h1 class="main-title">Marketing machines
          <br> <span class="vs">vs</span> Alec Gargett</h1>
 
-        <!-- ROW 1 -->
-        <div class="card negative">
-            <div class="logo-row">
-                <img src="images/ALP_logo_2017_960x340.svg.png" alt="Labor" class="logo-alp">
-                <span class="logo-separator">&</span>
-                <img src="images/AustralianGreensLogo_official_1920x1665.svg.png" alt="Greens" class="logo-greens">
-                <div class="icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#E53935" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
+        <!-- SIDE-BY-SIDE NEGATIVE CARDS -->
+        <div class="negative-wrapper">
+            <!-- ROW 1 (Left Column) -->
+            <div class="card negative">
+                <div class="logo-row">
+                    <img src="images/ALP_logo_2017_960x340.svg.png" alt="Labor" class="logo-alp">
+                    <span class="logo-separator">&</span>
+                    <img src="images/AustralianGreensLogo_official_1920x1665.svg.png" alt="Greens" class="logo-greens">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#E53935" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="content-row">
+                    <div class="text">Destructive, unsustainable, expensive and out-of-control growth and prices</div>
                 </div>
             </div>
-            <div class="content-row">
-                <div class="text">Destructive, unsustainable, expensive
-                 <br>and out-of-control growth and prices</div>
+
+            <!-- ROW 2 (Right Column) -->
+            <div class="card negative">
+                <div class="logo-row">
+                    <img src="images/ALP_logo_2017_960x340.svg.png" alt="Labor" class="logo-alp">
+                    <span class="logo-separator">,</span>
+                    <img src="images/Pauline_Hanson's_One_Nation_logo_3840x2215.svg.png" alt="One Nation" class="logo-onenation">
+                    <span class="logo-separator">&</span>
+                    <img src="images/Liberal_Party_of_Australia_logo_1920x1565.svg.png" alt="Liberals" class="logo-libs">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#E53935" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="content-row">
+                    <div class="text">Even higher costs and dangerous dependence on unsustainable coal, gas, and imported petrol</div>
+                </div>
             </div>
         </div>
 
-        <!-- ROW 2 -->
-        <div class="card negative">
-            <div class="logo-row">
-                <img src="images/ALP_logo_2017_960x340.svg.png" alt="Labor" class="logo-alp">
-                <span class="logo-separator">,</span>
-                <img src="images/Pauline_Hanson's_One_Nation_logo_3840x2215.svg.png" alt="One Nation" class="logo-onenation">
-                <span class="logo-separator">&</span>
-                <img src="images/Liberal_Party_of_Australia_logo_1920x1565.svg.png" alt="Liberals" class="logo-libs">
-                <div class="icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#E53935" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </div>
-            </div>
-            <div class="content-row">
-                <div class="text">Even higher costs and dangerous dependence on unsustainable coal, gas, and imported petrol</div>
-            </div>
-        </div>
-
-        <!-- ROW 3 -->
+        <!-- POSITIVE CARD (Full width bottom row) -->
         <div class="card positive">
             <div class="positive-header">
                 <div class="positive-name">Alec Gargett</div>
